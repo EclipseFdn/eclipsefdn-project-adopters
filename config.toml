@@ -1,0 +1,64 @@
+baseurl = "https://eclipsefdn-adopters.netlify.app"
+DefaultContentLanguage = "en"
+title = "Eclipse Project Adopters"
+theme = "eclipsefdn-hugo-solstice-theme"
+metaDataFormat = "yaml"
+#googleAnalytics = "U"
+disableKinds = []
+themesDir = "node_modules/"
+enableRobotsTXT = true
+pluralizeListTitles = false
+
+[Params]
+  google_tag_manager = "GTM-5WLCZXC"
+  description = "Adopters are organizations that voluntarily show their support for the Eclipse IoT projects they have adopted."
+  seo_title_suffix = " | The Eclipse Foundation"
+  keywords = ["adopters", "eclipse adopters", "eclipse project adopters"]
+  gcse = "011805775785170369411:p3ec0igo0qq"
+  js = "js/solstice.js"
+# logo = ""
+# styles = "css/styles.css"
+# favicon = ""
+# share_img = ""
+header_wrapper_class = "header-default-bg-img"
+# logo_width = ""
+# header_left_classes = ""
+# main_menu_wrapper_classes = ""
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  membership_level = "membership_levels"
+  participation_level = "participation_levels"
+
+[Author]
+  name = "Christopher Guindon"
+  website = "https://www.eclipse.org"
+  email = "webdev@eclipse-foundation.org"
+  facebook = "eclipse.org"
+  twitter = "EclipseFdn"
+  youtube = "EclipseFdn"
+  googleplus = "+Eclipse"
+  linkedin = "company/eclipse-foundation/"
+
+[permalinks]
+  news = "/:sections/:year/:month/:day/:slug/"
+
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true
+
+[[menu.main]]
+    name = "Projects"
+    url = "https://www.eclipse.org/projects/"
+    weight = 1
+
+[[menu.main]]
+    name = "Working Groups"
+    url = "https://www.eclipse.org/org/workinggroups/"
+    weight = 2
+
+[[menu.main]]
+    name = "Members"
+    url = "https://www.eclipse.org/membership/"
+    weight = 3
