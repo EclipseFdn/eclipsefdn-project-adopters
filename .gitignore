@@ -1,2 +1,3 @@
 /node_modules/
-/static/js/
+/static/js/*.js
+/static/js/*.json
