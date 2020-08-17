@@ -1543,6 +1543,9 @@
     state: "Regular"
     releases: 
       - 
+        name: "1.5.0"
+        url: "https://projects.eclipse.org/projects/ecd.theia/releases/1.5.0"
+      - 
         name: "1.4.0"
         url: "https://projects.eclipse.org/projects/ecd.theia/releases/1.4.0"
       - 
@@ -13670,6 +13673,9 @@
         url: "https://api.eclipse.org/account/profile/pleacu"
     project_leads: 
       - 
+        username: "rsoika"
+        url: "https://api.eclipse.org/account/profile/rsoika"
+      - 
         username: "pleacu"
         url: "https://api.eclipse.org/account/profile/pleacu"
     working_groups: []
@@ -17714,6 +17720,9 @@
     state: "Regular"
     releases: 
       - 
+        name: "3.14.14"
+        url: "https://projects.eclipse.org/projects/rt.ecf/releases/3.14.14"
+      - 
         name: "3.14.13"
         url: "https://projects.eclipse.org/projects/rt.ecf/releases/3.14.13"
       - 
@@ -19780,6 +19789,9 @@
         username: "pleacu"
         url: "https://api.eclipse.org/account/profile/pleacu"
     project_leads: 
+      - 
+        username: "rsoika"
+        url: "https://api.eclipse.org/account/profile/rsoika"
       - 
         username: "pleacu"
         url: "https://api.eclipse.org/account/profile/pleacu"
