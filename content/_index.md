@@ -17,9 +17,8 @@ Eclipse community of adopters is growing! Innovative organizations of all sizes 
 
 Do you use Eclipse technologies? Show your support for open source by adding your logo to this page. Please **[create an issue](https://github.com/EclipseFdn/eclipsefdn-project-adopters/issues/new?template=adopter_request.md)** to add your logo below.
 
+{{< page-adopters >}}
 
-## Currently available endpoints
+## Currently available Working Group sub-pages
 
-Below is a list of currently available endpoints for information on adopters. Don't see your Working Group or project listed below? [Create an issue](https://github.com/EclipseFdn/eclipsefdn-project-adopters/issues/new?template=adopter_request.md) to request a new endpoint be added! 
-
-{{<endpoints>}}
+{{< project-adopter-pages >}}

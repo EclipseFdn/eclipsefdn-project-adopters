@@ -1066,7 +1066,7 @@
         name: "Cloud Development Tools"
         id: "cloud-development-tools"
     spec_project_working_group: []
-    state: "Incubating"
+    state: "Regular"
     releases: 
       - 
         name: "1.0.0"
@@ -1391,6 +1391,12 @@
     spec_project_working_group: []
     state: "Incubating"
     releases: 
+      - 
+        name: "0.9.0"
+        url: "https://projects.eclipse.org/projects/ecd.sprotty/releases/0.9.0"
+      - 
+        name: "0.8.0"
+        url: "https://projects.eclipse.org/projects/ecd.sprotty/releases/0.8.0"
       - 
         name: "0.7.0"
         url: "https://projects.eclipse.org/projects/ecd.sprotty/releases/0.7.0"
@@ -7113,6 +7119,12 @@
     contributors: []
     committers: 
       - 
+        username: "fpaulini"
+        url: "https://api.eclipse.org/account/profile/fpaulini"
+      - 
+        username: "hmllerfmk"
+        url: "https://api.eclipse.org/account/profile/hmllerfmk"
+      - 
         username: "cglomb"
         url: "https://api.eclipse.org/account/profile/cglomb"
       - 
@@ -9046,7 +9058,9 @@
     website_url: ""
     logo: ""
     tags: []
-    github_repos: []
+    github_repos: 
+      - 
+        url: "https://github.com/eclipse/sparkplug"
     gitlab_repos: []
     contributors: []
     committers: 
@@ -13848,8 +13862,8 @@
     state: "Regular"
     releases: 
       - 
-        name: "2020-09 (6.13.0)"
-        url: "https://projects.eclipse.org/projects/modeling.mdt.ocl/releases/2020-09-6.13.0"
+        name: "2020-12 (6.13.0)"
+        url: "https://projects.eclipse.org/projects/modeling.mdt.ocl/releases/2020-12-6.13.0"
       - 
         name: "2020-06 (6.12.0)"
         url: "https://projects.eclipse.org/projects/modeling.mdt.ocl/releases/2020-06-6.12.0"
@@ -14615,8 +14629,8 @@
     state: "Regular"
     releases: 
       - 
-        name: "2020-09 (3.10.3)"
-        url: "https://projects.eclipse.org/projects/modeling.mmt.qvt-oml/releases/2020-09-3.10.3"
+        name: "2020-12 (3.10.3)"
+        url: "https://projects.eclipse.org/projects/modeling.mmt.qvt-oml/releases/2020-12-3.10.3"
       - 
         name: "2020-06 (3.10.2)"
         url: "https://projects.eclipse.org/projects/modeling.mmt.qvt-oml/releases/2020-06-3.10.2"
@@ -14702,8 +14716,8 @@
     state: "Incubating"
     releases: 
       - 
-        name: "2020-09 (0.24.0)"
-        url: "https://projects.eclipse.org/projects/modeling.mmt.qvtd/releases/2020-09-0.24.0"
+        name: "2020-12 (0.24.0)"
+        url: "https://projects.eclipse.org/projects/modeling.mmt.qvtd/releases/2020-12-0.24.0"
       - 
         name: "2020-06a (0.23.1)"
         url: "https://projects.eclipse.org/projects/modeling.mmt.qvtd/releases/2020-06a-0.23.1"
@@ -15033,9 +15047,6 @@
       - 
         username: "dexertier"
         url: "https://api.eclipse.org/account/profile/dexertier"
-      - 
-        username: "sbonnet"
-        url: "https://api.eclipse.org/account/profile/sbonnet"
       - 
         username: "pdavid"
         url: "https://api.eclipse.org/account/profile/pdavid"
@@ -16319,6 +16330,9 @@
     state: "Regular"
     releases: 
       - 
+        name: "3.0.38"
+        url: "https://projects.eclipse.org/projects/mylyn.docs/releases/3.0.38"
+      - 
         name: "3.0.37"
         url: "https://projects.eclipse.org/projects/mylyn.docs/releases/3.0.37"
       - 
@@ -16966,6 +16980,8 @@
         url: "https://github.com/eclipse/capella-releng-parent"
       - 
         url: "https://github.com/eclipse/capella-pipeline-library"
+      - 
+        url: "https://github.com/eclipse/capella-textual-editor"
     gitlab_repos: []
     contributors: []
     committers: 
@@ -20695,6 +20711,9 @@
     gitlab_repos: []
     contributors: []
     committers: 
+      - 
+        username: "jmorgane0v"
+        url: "https://api.eclipse.org/account/profile/jmorgane0v"
       - 
         username: "rpanzer"
         url: "https://api.eclipse.org/account/profile/rpanzer"

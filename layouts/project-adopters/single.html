@@ -1,0 +1,18 @@
+{{ define "main"}}
+<div id="content">
+  {{ .Content }}
+  
+  <div class="eclipsefdn-adopters"></div>
+  <p>Sample code used for this page:</p>
+  <pre>
+  &lt;div class="eclipsefdn-adopters"&gt;&lt;/div&gt;
+  &lt;script&gt;
+    eclipseFdnAdopters.getWGList({working_group: "{{ $.Params.working_group }}", ul_classes: "vertical-align list-inline"});
+  &lt;/script&gt;
+  </pre>
+  <script src="{{ "assets/js/eclipsefdn.adopters.js" | absURL}}"></script>
+  <script>
+    eclipseFdnAdopters.getWGList({src_root: "/adopters", working_group: "{{ $.Params.working_group }}", ul_classes: "vertical-align list-inline"})
+  </script>
+</div>
+{{ end }}

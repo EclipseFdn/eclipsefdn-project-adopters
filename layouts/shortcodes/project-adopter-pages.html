@@ -1,0 +1,6 @@
+<ul>
+{{ range (.Site.GetPage "/project-adopters").Pages }}
+{{ $title:= .Title }}
+<li><a href="{{.RelPermalink }}">{{ $title }}</a></li>
+{{ end }}
+</ul>

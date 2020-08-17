@@ -1,4 +1,4 @@
-baseurl = "https://eclipsefdn-adopters.netlify.app"
+baseurl = "/adopters"
 DefaultContentLanguage = "en"
 title = "Eclipse Project Adopters"
 theme = "eclipsefdn-hugo-solstice-theme"
@@ -18,21 +18,15 @@ pluralizeListTitles = false
   seo_title_suffix = " | The Eclipse Foundation"
   keywords = ["adopters", "eclipse adopters", "eclipse project adopters"]
   gcse = "011805775785170369411:p3ec0igo0qq"
-  js = "js/solstice.js"
+  js = "assets/js/scripts.min.js"
 # logo = ""
-# styles = "css/styles.css"
+  styles = "assets/css/styles.css"
 # favicon = ""
 # share_img = ""
 header_wrapper_class = "header-default-bg-img"
 # logo_width = ""
 # header_left_classes = ""
 # main_menu_wrapper_classes = ""
-
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-  membership_level = "membership_levels"
-  participation_level = "participation_levels"
 
 [Author]
   name = "Christopher Guindon"

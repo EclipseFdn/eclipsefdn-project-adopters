@@ -3,3 +3,8 @@
 /static/js/*.json
 /public
 .project
+/target/
+/src/main/resources/META-INF/resources/
+/bin/
+/.settings/
+/.classpath
