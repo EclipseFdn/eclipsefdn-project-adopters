@@ -1,0 +1,42 @@
+{{ $projects := $.Site.Data.eclipsefdn_projects }}
+{{ $adopters := $.Site.Data.adopters }}
+{{ $wg_id := .Params.working_group }}
+{{ $scratch := newScratch }}
+{{ range sort $projects "name" "asc" }}
+  {{ $proj := . }}
+  {{ $project_contains_working_group := false }}
+  {{ if $wg_id }}
+    {{ $working_group_id := $wg_id }}
+    {{ range .working_groups }}
+      {{ if and (ne $project_contains_working_group true) (eq .id $working_group_id) (gt (len (where $adopters "projects" "intersect" (slice $proj.project_id))) 0) }}
+        {{ $project_contains_working_group = true }}
+        {{ $scratch.SetInMap "projects_json" $proj.name $proj }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{
+  "working_group": "{{ $wg_id }}",
+  "projects": [
+  {{ range $index, $project := $scratch.GetSortedMapValues "projects_json" }}
+  {{ if gt $index 0 }},{{ end }}
+    {
+      "name": "{{ $project.name }}",
+      "projectId": "{{ $project.project_id }}",
+      "url": "{{ $project.url }}",
+      "logo": "{{ $project.logo }}",
+      "adopters": [
+      {{ range $index, $adopter := where $adopters "projects" "intersect" (slice $project.project_id) }}
+      {{ if gt $index 0 }},{{ end }}
+        {
+          "name": "{{ $adopter.name }}",
+          "url": "{{ $adopter.homepage_url }}",
+          "logo": "{{ $adopter.logo }}",
+          "logoWhite": "{{ $adopter.logo_white }}"
+        }
+      {{ end }}
+      ]
+    }
+  {{ end }}
+  ]
+}

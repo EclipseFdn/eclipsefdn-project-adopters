@@ -1,0 +1,8 @@
+<ul>
+{{ range .Site.Pages }}
+{{ $title:= .Title }}
+{{ with .OutputFormats.Get "json" -}}
+<li><a href="{{.RelPermalink }}">{{ $title }}</a></li>
+{{ end }}
+{{ end }}
+</ul>

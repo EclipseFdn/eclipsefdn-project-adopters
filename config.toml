@@ -9,6 +9,9 @@ themesDir = "node_modules/"
 enableRobotsTXT = true
 pluralizeListTitles = false
 
+[outputs]
+  page = ["json"]
+
 [Params]
   google_tag_manager = "GTM-5WLCZXC"
   description = "Adopters are organizations that voluntarily show their support for the Eclipse IoT projects they have adopted."
