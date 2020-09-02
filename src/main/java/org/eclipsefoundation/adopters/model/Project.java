@@ -13,6 +13,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Represents a project from the Eclipse API.
+ * 
+ * @author Martin Lowe
+ *
+ */
 public class Project {
 	private String projectId;
 	private String name;

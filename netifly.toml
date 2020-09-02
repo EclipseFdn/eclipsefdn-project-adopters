@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "npm run build_netlify && hugo --gc --minify -b https://eclipsefdn-adopters.netlify.app"
+command = "hugo --gc --minify -b https://eclipsefdn-adopters.netlify.app"
 
 [context.production.environment]
 HUGO_VERSION = "0.62.2"

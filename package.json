@@ -13,6 +13,7 @@
   },
   "scripts": {
     "build": "npm run production && rm -rf src/main/resources/META-INF/resources/* && hugo -d src/main/resources/META-INF/resources/",
+    "build_netlify": "npm run production",
     "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },

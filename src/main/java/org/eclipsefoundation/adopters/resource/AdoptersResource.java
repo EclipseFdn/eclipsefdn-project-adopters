@@ -29,10 +29,9 @@ import org.eclipsefoundation.adopters.service.AdopterService;
 import org.eclipsefoundation.adopters.service.ProjectService;
 
 /**
- * ECA validation endpoint for Git commits. Will use information from the bots,
- * projects, and accounts API to validate commits passed to this endpoint.
- * Should be as system agnostic as possible to allow for any service to request
- * validation with less reliance on services external to the Eclipse foundation.
+ * Retrieves adopted projects along with adopters info for display. This data
+ * can be viewed for all projects, a single project, or all projects defined
+ * within a working group by the working group ID.
  * 
  * @author Martin Lowe
  *

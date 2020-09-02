@@ -1,14 +1,26 @@
+/*******************************************************************************
+ * Copyright (C) 2020 Eclipse Foundation
+ * 
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ * 
+ * SPDX-License-Identifier: EPL-2.0
+ ******************************************************************************/
 package org.eclipsefoundation.adopters.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.databind.PropertyNamingStrategy;
-import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import com.google.gson.annotations.SerializedName;
 
-@JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
+/**
+ * Represents an adopter from the serialized adopter.json file.
+ * 
+ * @author Martin Lowe
+ *
+ */
 public class Adopter {
 	private String name;
 	@SerializedName("homepage_url")
