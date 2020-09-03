@@ -14,24 +14,25 @@ import static java.nio.file.StandardWatchEventKinds.ENTRY_DELETE;
 import static java.nio.file.StandardWatchEventKinds.ENTRY_MODIFY;
 import static java.nio.file.StandardWatchEventKinds.OVERFLOW;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.BufferedInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.nio.file.WatchEvent;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+import javax.json.bind.Jsonb;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipsefoundation.adopters.model.AdoptedProject;
@@ -41,8 +42,6 @@ import org.eclipsefoundation.adopters.model.Project;
 import org.eclipsefoundation.adopters.service.AdopterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.google.gson.Gson;
 
 import io.quarkus.runtime.Startup;
 
@@ -58,49 +57,56 @@ import io.quarkus.runtime.Startup;
 public class DefaultAdopterService implements AdopterService {
 	private static final Logger LOGGER = LoggerFactory.getLogger(DefaultAdopterService.class);
 
-	@ConfigProperty(name = "eclipse.adopters.dirpath", defaultValue = "/tmp/quarkus")
-	String adoptersLocation;
-	@ConfigProperty(name = "eclipse.adopters.filename", defaultValue = "adopters.json")
-	String adoptersName;
+	@ConfigProperty(name = "eclipse.adopters.path.json", defaultValue = "/tmp/quarkus/adopters.json")
+	Path adoptersLocation;
 	@ConfigProperty(name = "eclipse.adopters.retry.count", defaultValue = "3")
 	int retryCount;
 	@ConfigProperty(name = "eclipse.adopters.retry.timeoutInMS", defaultValue = "1000")
 	long retryTimeout;
 
+	@Inject
+	Jsonb json;
+
+	/**
+	 * All updates to the adopters list should be done through the setAdopters
+	 * method to ensure thread safety
+	 */
 	private List<Adopter> adopters;
 	private WatchService watcher;
-
-	private ReentrantLock lock;
-	private boolean running;
+	private Thread watchThread;
 
 	@PostConstruct
 	public void init() throws IOException {
-		this.lock = new ReentrantLock();
-		this.adopters = new ArrayList<>();
-		Path adoptersDir = Paths.get(adoptersLocation);
-		Path adoptersFile = Paths.get(adoptersLocation, adoptersName);
-		if (Files.exists(adoptersDir)) {
-			// read in the initial file if it exists
-			if (Files.exists(adoptersFile)) {
-				LOGGER.debug("Found an adopters file at path {}, reading in", adoptersFile);
-				readInFile(adoptersFile);
-			}
-
-			watcher = FileSystems.getDefault().newWatchService();
-			// register the adopter location to watch
-			LOGGER.debug("Registering file watcher on directory {}", adoptersDir);
-			adoptersDir.register(watcher, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
-
-			// start file watching on a new thread
-			new Thread(this::update).start();
-		} else {
-			throw new IllegalArgumentException();
+		setAdopters(Collections.emptyList());
+		// attempt to ensure that the base directory exists for watching
+		Path parentDir = adoptersLocation.getParent();
+		if (!Files.exists(parentDir)) {
+			Files.createDirectory(parentDir);
 		}
+		// read in the initial file if it exists
+		if (Files.exists(adoptersLocation)) {
+			LOGGER.debug("Found an adopters file at path {}, reading in", adoptersLocation);
+			List<Adopter> initialAdopters = readInAdopters(adoptersLocation, json);
+			if (initialAdopters != null) {
+				setAdopters(initialAdopters);
+			}
+		}
+
+		// create and set the watch service
+		this.watcher = FileSystems.getDefault().newWatchService();
+		// register the adopter location to watch
+		LOGGER.debug("Registering file watcher on directory {}", parentDir);
+		parentDir.register(watcher, ENTRY_CREATE, ENTRY_DELETE, ENTRY_MODIFY);
+
+		// start file watching on a new thread
+		this.watchThread = new Thread(this::update);
+		this.watchThread.start();
 	}
 
 	@PreDestroy
 	public void shutdown() {
-		this.running = false;
+		// stop the watch thread from running
+		this.watchThread.interrupt();
 	}
 
 	/**
@@ -108,88 +114,84 @@ public class DefaultAdopterService implements AdopterService {
 	 * 
 	 * @throws IOException
 	 */
+
+	@SuppressWarnings("unchecked")
 	private void update() {
-		// soft lock this to a single thread
-		if (!this.lock.isLocked()) {
-			this.lock.lock();
+		while (true) {
+			WatchKey key = null;
 			try {
-				// set the state to running at the start
-				this.running = true;
-				// watch for running state to change for gentle shutdowns
-				while (this.running) {
-					WatchKey key = null;
-					try {
-						key = watcher.take();
-						// if there was an error while watching for changes, try again
-						if (key == null) {
-							continue;
-						}
-
-						// pass a filtered list of events to be processed
-						@SuppressWarnings("unchecked")
-						List<WatchEvent<Path>> events = key.pollEvents().stream()
-								.filter(e -> e.kind() != OVERFLOW && e.kind().type() == Path.class)
-								.map(e -> (WatchEvent<Path>) e)
-								.filter(e -> ((Path) e.context()).getFileName().toString().equals(adoptersName))
-								.collect(Collectors.toList());
-						processEvents(events);
-					} catch (InterruptedException e) {
-						// represents shutdown state, so end processing
-						Thread.currentThread().interrupt();
-					} finally {
-						// return the key to the watch service
-						if (key != null && key.isValid()) {
-							key.reset();
-						}
-					}
+				key = watcher.take();
+				// if there was an error while watching for changes, try again
+				if (key == null) {
+					continue;
 				}
+
+				// pass a filtered list of events to be processed
+				key.pollEvents().stream().filter(e -> e.kind() != OVERFLOW && e.kind().type() == Path.class)
+						.map(e -> (WatchEvent<Path>) e)
+						.filter(e -> ((Path) e.context()).getFileName().equals(adoptersLocation.getFileName()))
+						.forEach(this::processEvent);
+			} catch (@SuppressWarnings("java:S2142") InterruptedException e) {
+				LOGGER.debug("Ending watch services, as thread was interrupted and closing");
+				try {
+					this.watcher.close();
+				} catch (IOException e1) {
+					LOGGER.error("Error while closing the watch service", e1);
+				}
+				break;
 			} finally {
-				// release the lock once leaving the current block
-				this.lock.unlock();
-			}
-		}
-	}
-
-	private void processEvents(List<WatchEvent<Path>> events) {
-		// process each of the queued events
-		for (WatchEvent<Path> event : events) {
-			// clear the adopter list if the event is a deletion event
-			if (event.kind() == ENTRY_DELETE) {
-				LOGGER.debug("Detected the deletion of adopters file, emptying array");
-				synchronized (this) {
-					this.adopters = new ArrayList<>();
+				// return the key to the watch service
+				if (key != null && key.isValid()) {
+					key.reset();
 				}
-			} else {
-				// indicates an update or created file on the given
-				readInFile(Paths.get(adoptersLocation, event.context().getFileName().toString()));
 			}
 		}
+
 	}
 
-	private void readInFile(Path adoptersPath) {
+	private void processEvent(WatchEvent<Path> event) {
+		// clear the adopter list if the event is a deletion event
+		if (event.kind() == ENTRY_DELETE) {
+			LOGGER.debug("Detected the deletion of adopters file, emptying array");
+			setAdopters(Collections.emptyList());
+		} else {
+			// indicates an update or created file on the given
+			// retrieve the new adopters and set them if the read operation was successful
+			List<Adopter> newAdopters = readInAdopters(adoptersLocation, json);
+			if (newAdopters != null) {
+				setAdopters(newAdopters);
+			}
+		}
+
+	}
+
+	private static List<Adopter> readInAdopters(Path adoptersPath, Jsonb json) {
 		LOGGER.debug("Detected an update for adopters file, reading in {}", adoptersPath);
-		Gson gson = new Gson();
-		// get a Gson processor, and read in the file
+		// get a json processor, and read in the file
 		if (Files.exists(adoptersPath)) {
-			try (FileReader fileReader = new FileReader(adoptersPath.toFile());
-					BufferedReader sr = new BufferedReader(fileReader)) {
-				// read the adopters list from the JSON data
-				AdopterList al = gson.fromJson(sr, AdopterList.class);
-				synchronized (this) {
-					this.adopters = al.getAdopters();
-				}
+			try (InputStream is = new BufferedInputStream(Files.newInputStream(adoptersPath))) {
+				AdopterList al = json.fromJson(is, AdopterList.class);
+				return al.getAdopters();
 			} catch (IOException e) {
 				LOGGER.warn("Error reading file at path: {}\n", adoptersPath, e);
 			}
 		} else {
-			LOGGER.error("Bad file path was passed for adopters update, not reading in file: {}", adoptersPath);
+			LOGGER.error("Bad file was passed for adopters update, not reading in file: {}", adoptersPath);
 		}
+		// empty list is valid state, so return null to represent error/no update
+		return null;
 	}
 
 	@Override
 	public List<Adopter> getAdopters() {
 		synchronized (this) {
 			return new ArrayList<>(adopters);
+		}
+	}
+
+	public void setAdopters(List<Adopter> adopters) {
+		synchronized (this) {
+			this.adopters = new ArrayList<>(adopters);
 		}
 	}
 

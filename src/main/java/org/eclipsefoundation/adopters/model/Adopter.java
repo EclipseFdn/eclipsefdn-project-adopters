@@ -12,8 +12,8 @@ package org.eclipsefoundation.adopters.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.google.gson.annotations.SerializedName;
+import javax.json.bind.annotation.JsonbProperty;
+import javax.json.bind.annotation.JsonbTransient;
 
 /**
  * Represents an adopter from the serialized adopter.json file.
@@ -23,10 +23,10 @@ import com.google.gson.annotations.SerializedName;
  */
 public class Adopter {
 	private String name;
-	@SerializedName("homepage_url")
+	@JsonbProperty("homepage_url")
 	private String homepageUrl;
 	private String logo;
-	@SerializedName("logo_white")
+	@JsonbProperty("logo_white")
 	private String logoWhite;
 	private List<String> projects;
 
@@ -93,7 +93,7 @@ public class Adopter {
 	/**
 	 * @return the projects
 	 */
-	@JsonIgnore
+	@JsonbTransient
 	public List<String> getProjects() {
 		return new ArrayList<>(projects);
 	}
