@@ -1,0 +1,77 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: eclipsefdn-project-adopters
+  namespace: foundation-internal-webdev-apps
+spec:
+  selector:
+    matchLabels:
+      app: eclipsefdn-project-adopters
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: eclipsefdn-project-adopters
+        environment: production
+    spec:
+      affinity:
+        nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - preference:
+              matchExpressions:
+              - key: speed
+                operator: NotIn
+                values:
+                - fast
+            weight: 1
+      containers:
+      - name: app
+        image: eclipsefdn/eclipsefdn-project-adopters:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            cpu: '1'
+            memory: 256Mi
+          requests:
+            cpu: 200m
+            memory: 128Mi
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  name: eclipsefdn-project-adopters
+  namespace: foundation-internal-webdev-apps
+spec:
+  ports:
+  - name: "http"
+    port: 80
+    protocol: "TCP"
+    targetPort: 8080
+  selector:
+    app: eclipsefdn-project-adopters
+    environment: production
+---
+apiVersion: "route.openshift.io/v1"
+kind: "Route"
+metadata:
+  name: eclipsefdn-project-adopters
+  namespace: foundation-internal-webdev-apps
+  annotations:
+    haproxy.router.openshift.io/timeout: 20s
+    haproxy.router.openshift.io/disable_cookies: "true"
+    haproxy.router.openshift.io/balance: roundrobin
+spec:
+  host: "api.eclipse.org"
+  path: "/adopters"
+  port:
+    targetPort: "http"
+  tls:
+    insecureEdgeTerminationPolicy: "Redirect"
+    termination: "edge"
+  to:
+    kind: "Service"
+    name: eclipsefdn-project-adopters
+    weight: 100
