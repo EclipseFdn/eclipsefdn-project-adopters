@@ -1,0 +1,20 @@
+####
+#
+# Create a base image for building web+java properties. Add support for nodeJS, NPM, and mvn
+#
+####
+FROM fabric8/java-alpine-openjdk11-jre
+
+# add mvn, npm, nodejs, hugo
+RUN apk update
+RUN apk add --no-cache\
+  npm \
+  nodejs \
+  maven \
+  wget \
+  tar
+
+WORKDIR /tmp
+RUN wget -qO- https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz | tar xvz - -C /bin/
+
+CMD ["jshell"]
