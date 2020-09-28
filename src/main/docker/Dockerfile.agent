@@ -6,8 +6,7 @@
 FROM fabric8/java-alpine-openjdk11-jre
 
 # add mvn, npm, nodejs, hugo
-RUN apk update
-RUN apk add --no-cache\
+RUN apk add --update --no-cache\
   npm \
   nodejs \
   maven \
@@ -15,6 +14,6 @@ RUN apk add --no-cache\
   tar
 
 WORKDIR /tmp
-RUN wget -qO- https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz | tar xvz - -C /bin/
+RUN wget -qO- https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.tar.gz | tar xvz -C /bin/
 
-CMD ["jshell"]
+ENTRYPOINT [ "/bin/sh" ]

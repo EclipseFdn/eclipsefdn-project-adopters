@@ -71,9 +71,9 @@ pipeline {
       }
       steps {
         sh '''
-           npm ci
+           npm ci --no-cache
            npm run build
-           ./mvnw package
+           mvn package
            docker build -f src/main/docker/Dockerfile.jvm --no-cache -t ${IMAGE_NAME}:${TAG_NAME} -t ${IMAGE_NAME}:latest .
         '''
       }
