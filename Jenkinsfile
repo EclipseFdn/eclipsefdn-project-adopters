@@ -65,15 +65,65 @@ pipeline {
   }
 
   stages {
+    stage('Build build environment docker image') {
+      agent {
+        label 'docker-build'
+      }
+      steps {
+        withDockerRegistry([credentialsId: '04264967-fea0-40c2-bf60-09af5aeba60f', url: 'https://index.docker.io/v1/']) {
+          sh '''
+             docker build -f src/main/docker/Dockerfile.agent --no-cache -t ${IMAGE_NAME}-build-env:${TAG_NAME} -t ${IMAGE_NAME}-build-env:latest .
+             docker push ${IMAGE_NAME}-build-env:${TAG_NAME} 
+             docker push ${IMAGE_NAME}-build-env:latest 
+          '''
+        }
+      }
+    }
+    stage('Build project') {
+      agent {
+        kubernetes {
+          label 'buildenv-agent'
+          yaml '''
+          apiVersion: v1
+          kind: Pod
+          spec:
+            containers:
+            - name: buildcontainer
+              image: eclipsefdn/eclipsefdn-project-adopters-build-env:latest
+              imagePullPolicy: Always
+              command:
+              - cat
+              tty: true
+              resources:
+                limits:
+                  cpu: 2
+                  memory: 4Gi
+            - name: jnlp
+              resources:
+                limits:
+                  cpu: 2
+                  memory: 4Gi
+          '''
+        }
+      }
+      steps {
+        container('buildcontainer') {
+          sh '''
+             npm ci --no-cache
+             npm run build
+             mvn package
+          '''
+          stash name: "target", includes: "target/**/*"
+        }
+      }
+    }
     stage('Build docker image') {
       agent {
         label 'docker-build'
       }
       steps {
+        unstash name: "target"
         sh '''
-           npm ci --no-cache
-           npm run build
-           mvn package
            docker build -f src/main/docker/Dockerfile.jvm --no-cache -t ${IMAGE_NAME}:${TAG_NAME} -t ${IMAGE_NAME}:latest .
         '''
       }
@@ -108,7 +158,7 @@ pipeline {
       }
       steps {
         container('kubectl') {
-          withKubeConfig([credentialsId: '1d8095ea-7e9d-4e94-b799-6dadddfdd18a', serverUrl: 'https://console-int.c1-ci.eclipse.org']) {
+          withKubeConfig([credentialsId: '6ad93d41-e6fc-4462-b6bc-297e360784fd', serverUrl: 'https://api.okd-c1.eclipse.org:6443']) {
             sh '''
               DEPLOYMENT="$(k8s getFirst deployment "${NAMESPACE}" "app=${APP_NAME},environment=${ENVIRONMENT}")"
               if [[ $(echo "${DEPLOYMENT}" | jq -r 'length') -eq 0 ]]; then
