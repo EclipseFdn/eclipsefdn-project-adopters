@@ -1,6 +1,4 @@
 /node_modules/
-/static/js/*.js
-/static/js/*.json
 /public
 .project
 /target/
@@ -8,7 +6,7 @@
 /bin/
 /.settings/
 /.classpath
-/static/images/vendor/
-/static/fonts/vendor/
-/static/js/
-/static/css/
+/static/assets/images/vendor/*
+/static/assets/fonts/vendor/*
+/static/assets/js/*
+/static/assets/css/*
