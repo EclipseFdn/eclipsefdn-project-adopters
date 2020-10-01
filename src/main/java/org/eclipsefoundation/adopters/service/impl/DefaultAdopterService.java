@@ -114,7 +114,6 @@ public class DefaultAdopterService implements AdopterService {
 	 * 
 	 * @throws IOException
 	 */
-
 	@SuppressWarnings("unchecked")
 	private void update() {
 		while (true) {
