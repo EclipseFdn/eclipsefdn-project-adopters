@@ -41,6 +41,17 @@ spec:
           requests:
             cpu: 200m
             memory: 128Mi
+        volumeMounts:
+        - name: adopters
+          mountPath: "/config"
+          readOnly: true
+      volumes:
+        - name: adopters
+          configMap:
+            name: eclipsefdn-project-adopters-map
+            items:
+              - key: "adopters_json_compressed"
+                path: "adopters.json"
 ---
 apiVersion: "v1"
 kind: "Service"
