@@ -43,8 +43,8 @@ import io.quarkus.runtime.Startup;
  */
 @Startup
 @ApplicationScoped
-public class PagintationProjectsService implements ProjectService {
-	private static final Logger LOGGER = LoggerFactory.getLogger(PagintationProjectsService.class);
+public class PaginationProjectsService implements ProjectService {
+	private static final Logger LOGGER = LoggerFactory.getLogger(PaginationProjectsService.class);
 
 	@Inject
 	ManagedExecutor exec;
