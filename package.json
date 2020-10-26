@@ -12,8 +12,9 @@
     "url": "git://github.com/EclipseFdn/eclipsefdn-project-adopters.git"
   },
   "scripts": {
-    "build": "npm run production && rm -rf src/main/resources/META-INF/resources/* && hugo -d src/main/resources/META-INF/resources/",
+    "build": "npm run production && npm run minify_adopters && rm -rf src/main/resources/META-INF/resources/* && hugo -d src/main/resources/META-INF/resources/",
     "build_netlify": "npm run production",
+    "minify_adopters": "mkdir -p target/config && ./node_modules/json-minify/index.js config/adopters.json > target/config/adopters.json",
     "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },

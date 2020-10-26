@@ -166,7 +166,7 @@ pipeline {
                 exit 1
               else 
                 DEPLOYMENT_NAME="$(echo "${DEPLOYMENT}" | jq -r '.metadata.name')"
-                kubectl create configmap eclipsefdn-project-adopters-map -n "${NAMESPACE}" --from-file=adopters_json_compressed=config/adopters.json --dry-run=client -o yaml | kubectl apply -f -
+                kubectl create configmap eclipsefdn-project-adopters-map -n "${NAMESPACE}" --from-file=adopters_json_compressed=target/config/adopters.json --dry-run=client -o yaml | kubectl apply -f -
                 kubectl set image "deployment.v1.apps/${DEPLOYMENT_NAME}" -n "${NAMESPACE}" "${CONTAINER_NAME}=${IMAGE_NAME}:${TAG_NAME}" --record=true
                 if ! kubectl rollout status "deployment.v1.apps/${DEPLOYMENT_NAME}" -n "${NAMESPACE}"; then
                   # will fail if rollout does not succeed in less than .spec.progressDeadlineSeconds
