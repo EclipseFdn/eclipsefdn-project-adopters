@@ -27,6 +27,7 @@
 
   // Define object
   var eclipseFdnAdopters = {};
+  var precompiledRegex = /<([^>]*?)>;(\s?[\w-]*?="(?:\\"|[^"])*";){0,}\s?rel="next"/;
   // Default settings
   var default_options = {
     project_id: '',
@@ -63,7 +64,7 @@
     var opts = getMergedOptions(options);
     console.log(opts)
     fireCall(opts, function(response) {
-      createProjectList(JSON.parse(response), opts, document.querySelectorAll(opts.selector));
+      createProjectList(response, opts, document.querySelectorAll(opts.selector));
     });
   }
 
@@ -76,37 +77,65 @@
     var opts = getMergedOptions(options);
     // create callback on ready
     fireCall(opts, function(response) {
-      createWGProjectsList(JSON.parse(response), opts, document.querySelectorAll(opts.selector));
+      createWGProjectsList(response, opts, document.querySelectorAll(opts.selector));
     });
   }
 
-  function fireCall(opts, callback) {
+  function fireCall(opts, callback, currentData = []) {
     var xhttp = new XMLHttpRequest();
     // create callback on ready
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        callback(this.responseText);
+        // merge new data with current
+        var json = JSON.parse(this.responseText);
+        if (Array.isArray(currentData) || currentData.length) {
+          json = currentData.concat(json);
+        }
+
+        // check the link header as long as its set
+        var linkHeader = xhttp.getResponseHeader('Link');
+        if (linkHeader !== null) {
+          var match = linkHeader.match(precompiledRegex);
+          // if there is no match, then there is no next and we are on the last page and should process data through callback
+          if (match !== null) {
+            opts.next = match[1];
+            fireCall(opts, callback, json);
+          } else {
+            callback(json);
+          }
+        } else {
+          callback(json);
+        }
+
       } else if (this.readyState == 4) {
         console.log('Error while retrieving adopters data, could not complete operation');
       }
     };
+
+    // get the URL to call, using the 'next' url if set, otherwise building from original option set
+    var url;
+    if (opts.next !== undefined) {
+      url = opts.next;
+    } else {
+      url = opts.src_root + opts.src_projects_prefix;
+      if (opts.project_id !== undefined && opts.project_id.trim() !== '') {
+        url += opts.project_id;
+      }
+      if (opts.working_group !== undefined && opts.working_group.trim() !== '') {
+        url += '?working_group=' + opts.working_group;
+      }
+    }
     // send request to get JSON data
-    var url = opts.src_root + opts.src_projects_prefix;
-    if (opts.project_id !== undefined && opts.project_id.trim() !== '') {
-      url += opts.project_id;
-    }
-    if (opts.working_group !== undefined && opts.working_group.trim() !== '') {
-      url += '?working_group=' + opts.working_group;
-    }
     xhttp.open('GET', url, true);
     xhttp.send();
   }
-  
+
   function createWGProjectsList(json_object, opts, el) {
+    console.log(json_object);
     for (const project of json_object) {
       var projectOpts = JSON.parse(JSON.stringify(opts));
       projectOpts.project_id = project.project_id;
-      
+
       // add the title
       const h3 = document.createElement('h3');
       h3.textContent = project.name;
