@@ -50,7 +50,7 @@ public class PaginatedResultsFilter implements ContainerResponseFilter {
 							getArrayLimitedNumber(listEntity, defaultPageSize * page)));
 
 			// add link headers for paginated page hints
-			UriBuilder builder = getUriInfo().getBaseUriBuilder();
+			UriBuilder builder = getUriInfo().getRequestUriBuilder();
 			LinkHeader lh = new LinkHeader();
 			// add first + last page link headers
 			lh.addLink("this page of results", "self", buildHref(builder, page), "");
