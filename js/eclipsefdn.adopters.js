@@ -183,6 +183,7 @@
           a.setAttribute('href', url);
           img.setAttribute('alt', name);
           img.setAttribute('src', opts.src_root + '/assets/images/adopters/' + logo);
+          img.setAttribute('class', 'adopters-img');
 
           a.appendChild(img);
           li.appendChild(a);
