@@ -9,26 +9,35 @@
 				"iot.cyclonedds"
 			]
 		},
-    {
-      "name": "Above Robotics",
-      "homepage_url": "https://www.aboverobotics.com/",
-      "logo": "logo-above-robotices.png",
-      "logo_white": "logo-above-robotices-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
-    {
-      "name": "ADLINK Technology",
-      "homepage_url": "https://www.adlinktech.com",
-      "logo": "logo-adlink.svg",
-      "logo_white": "logo-adlink-white.png",
-      "projects": [
-        "iot.cyclonedds",
-        "technology.iceoryx",
-        "iot.zenoh"
-      ]
-    },
+		{
+			"name": "Above Robotics",
+			"homepage_url": "https://www.aboverobotics.com/",
+			"logo": "logo-above-robotices.png",
+			"logo_white": "logo-above-robotices-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "ADLINK Technology",
+			"homepage_url": "https://www.adlinktech.com",
+			"logo": "logo-adlink.svg",
+			"logo_white": "logo-adlink-white.png",
+			"projects": [
+				"iot.cyclonedds",
+				"technology.iceoryx",
+				"iot.zenoh"
+			]
+		},
+		{
+			"name": "Alias Robotics",
+			"homepage_url": "https://aliasrobotics.com/",
+			"logo": "logo-alias.png",
+			"logo_white": "logo-alias-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
 		{
 			"name": "Aloxy",
 			"homepage_url": "http://www.aloxy.io/",
@@ -100,34 +109,34 @@
 				"iot.cyclonedds"
 			]
 		},
-    {
-      "name": "Brisa Robotica",
-      "homepage_url": "https://brisa.tech",
-      "logo": "logo-brisa.svg",
-      "logo_white": "logo-brisa-white.svg",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
-    {
-      "name": "CentraleSupelec, CNRS, Signals and Systems Laboratory",
-      "homepage_url": "https://www.l2s.centralesupelec.fr/en/",
-      "logo": "logo-centralesupelec.png",
-      "logo_white": "logo-centralesupelec-white.png",
-      "projects": [
-        "iot.zenoh"
-      ]
-    },
-    {
-      "name": "CONTACT Software",
-      "homepage_url": "https://www.contact-software.com/en/products/iot-platform-for-digital-business-models/",
-      "logo": "logo-contactsoftware.png",
-      "logo_white": "logo-contactsoftware-white.png",
-      "projects": [
-        "iot.kura",
-        "iot.kapua"
-      ]
-    },
+		{
+			"name": "Brisa Robotica",
+			"homepage_url": "https://brisa.tech",
+			"logo": "logo-brisa.svg",
+			"logo_white": "logo-brisa-white.svg",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "CentraleSupelec, CNRS, Signals and Systems Laboratory",
+			"homepage_url": "https://www.l2s.centralesupelec.fr/en/",
+			"logo": "logo-centralesupelec.png",
+			"logo_white": "logo-centralesupelec-white.png",
+			"projects": [
+				"iot.zenoh"
+			]
+		},
+		{
+			"name": "CONTACT Software",
+			"homepage_url": "https://www.contact-software.com/en/products/iot-platform-for-digital-business-models/",
+			"logo": "logo-contactsoftware.png",
+			"logo_white": "logo-contactsoftware-white.png",
+			"projects": [
+				"iot.kura",
+				"iot.kapua"
+			]
+		},
 		{
 			"name": "EclipseSource",
 			"homepage_url": "https://eclipsesource.com/",
@@ -147,6 +156,15 @@
 			]
 		},
 		{
+			"name": "Ericsson",
+			"homepage_url": "https://www.ericsson.com/en/networks/offerings/cellular-iot",
+			"logo": "logo-ericsson.svg",
+			"logo_white": "logo-ericsson-white.svg",
+			"projects": [
+				"iot.leshan"
+			]
+		},
+		{
 			"name": "Eurotech",
 			"homepage_url": "https://www.eurotech.com",
 			"logo": "logo-eurotech.svg",
@@ -157,62 +175,84 @@
 				"iot.paho"
 			]
 		},
-    {
-      "name": "FIT IoT-Lab",
-      "homepage_url": "https://www.iot-lab.info/",
-      "logo": "logo-iotlab.svg",
-      "logo_white": "logo-iotlab-white.svg",
-      "projects": [
-        "iot.leshan"
-      ]
-    },
-    {
-      "name": "FARobot",
-      "homepage_url": "https://www.farobottech.com/",
-      "logo": "logo-farobot.png",
-      "logo_white": "logo-farobot-white.png",
-      "projects": [
-        "iot.cyclonedds",
-        "technology.iceoryx",
-        "iot.zenoh"
-      ]
-    },
-    {
-      "name": "Freedom Robotics",
-      "homepage_url": "https://www.freedomrobotics.ai/",
-      "logo": "logo-freedom-robotics.png",
-      "logo_white": "logo-freedom-robotics-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
-    {
-      "name": "Gaia Platform",
-      "homepage_url": "https://www.gaiaplatform.io/",
-      "logo": "logo-gaia.png",
-      "logo_white": "logo-gaia-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
-    {
-      "name": "Ghost Robotics",
-      "homepage_url": "https://www.ghostrobotics.io/",
-      "logo": "logo-ghostrobotics.png",
-      "logo_white": "logo-ghostrobotics-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
-    {
-      "name": "Hawai'i - AVTech",
-      "homepage_url": "https://www.HawaiiAVTech.com",
-      "logo": "logo-hawaiiavtech.png",
-      "logo_white": "logo-hawaiiavtech-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
+		{
+			"name": "F1Tenth Autonomous Racing Community",
+			"homepage_url": "https://f1tenth.org/",
+			"logo": "logo-f1tenth.png",
+			"logo_white": "logo-f1tenth-white.png",
+			"projects": [
+				"iot.cyclonedds",
+				"technology.iceoryx",
+				"iot.zenoh"
+			]
+		},
+		{
+			"name": "FIT IoT-Lab",
+			"homepage_url": "https://www.iot-lab.info/",
+			"logo": "logo-iotlab.svg",
+			"logo_white": "logo-iotlab-white.svg",
+			"projects": [
+				"iot.leshan"
+			]
+		},
+		{
+			"name": "FARobot",
+			"homepage_url": "https://www.farobottech.com/",
+			"logo": "logo-farobot.png",
+			"logo_white": "logo-farobot-white.png",
+			"projects": [
+				"iot.cyclonedds",
+				"technology.iceoryx",
+				"iot.zenoh"
+			]
+		},
+		{
+			"name": "Freedom Robotics",
+			"homepage_url": "https://www.freedomrobotics.ai/",
+			"logo": "logo-freedom-robotics.png",
+			"logo_white": "logo-freedom-robotics-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "Foxconn",
+			"homepage_url": "https://www.foxconn.com/en-us/",
+			"logo": "logo-foxconn.png",
+			"logo_white": "logo-foxconn-white.png",
+			"projects": [
+				"iot.cyclonedds",
+				"technology.iceoryx",
+				"iot.zenoh"
+			]
+		},
+		{
+			"name": "Gaia Platform",
+			"homepage_url": "https://www.gaiaplatform.io/",
+			"logo": "logo-gaia.png",
+			"logo_white": "logo-gaia-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "Ghost Robotics",
+			"homepage_url": "https://www.ghostrobotics.io/",
+			"logo": "logo-ghostrobotics.png",
+			"logo_white": "logo-ghostrobotics-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "Hawai'i - AVTech",
+			"homepage_url": "https://www.HawaiiAVTech.com",
+			"logo": "logo-hawaiiavtech.png",
+			"logo_white": "logo-hawaiiavtech-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
 		{
 			"name": "Husarion",
 			"homepage_url": "https://husarion.com/",
@@ -231,24 +271,24 @@
 				"iot.cyclonedds"
 			]
 		},
-    {
-      "name": "Intel robotics project",
-      "homepage_url": "https://www.intel.com/content/www/us/en/internet-of-things/overview.html",
-      "logo": "logo-intel.png",
-      "logo_white": "logo-intel-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
-    {
-      "name": "itemis AG",
-      "homepage_url": "https://www.itemis.com",
-      "logo": "logo-itemis.png",
-      "logo_white": "logo-itemis-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
+		{
+			"name": "Intel robotics project",
+			"homepage_url": "https://www.intel.com/content/www/us/en/internet-of-things/overview.html",
+			"logo": "logo-intel.png",
+			"logo_white": "logo-intel-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "itemis AG",
+			"homepage_url": "https://www.itemis.com",
+			"logo": "logo-itemis.png",
+			"logo_white": "logo-itemis-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
 		{
 			"name": "Kiwigrid GmbH",
 			"homepage_url": "https://www.kiwigrid.com",
@@ -278,24 +318,33 @@
 				"iot.californium"
 			]
 		},
-    {
-      "name": "Lightfleet Corporation",
-      "homepage_url": "http://www.lightfleet.com",
-      "logo": "logo-lightfleet.png",
-      "logo_white": "logo-lightfleet-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
-    {
-      "name": "Mapless AI, Inc.",
-      "homepage_url": "https://mapless.ai",
-      "logo": "logo-maplessai.svg",
-      "logo_white": "logo-maplessai-white.svg",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
+		{
+			"name": "LG Electronics, America R&D Lab",
+			"homepage_url": "https://www.lgsvlsimulator.com/",
+			"logo": "logo-lg.png",
+			"logo_white": "logo-lg-white.svg",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "Lightfleet Corporation",
+			"homepage_url": "http://www.lightfleet.com",
+			"logo": "logo-lightfleet.png",
+			"logo_white": "logo-lightfleet-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "Mapless AI, Inc.",
+			"homepage_url": "https://mapless.ai",
+			"logo": "logo-maplessai.svg",
+			"logo_white": "logo-maplessai-white.svg",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
 		{
 			"name": "Microsoft",
 			"homepage_url": "https://microsoft.com/iot",
@@ -305,29 +354,40 @@
 				"iot.paho"
 			]
 		},
-    {
-      "name": "Mission Robotics Inc.",
-      "homepage_url": "https://missionrobotics.us/",
-      "logo": "logo-mission-robotics.svg",
-      "logo_white": "logo-mission-robotics-white.svg",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
-    {
-      "name": "New Eagle",
-      "homepage_url": "https://neweagle.net",
-      "logo": "logo-neweagle.png",
-      "logo_white": "logo-neweagle-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
+		{
+			"name": "Mission Robotics Inc.",
+			"homepage_url": "https://missionrobotics.us/",
+			"logo": "logo-mission-robotics.svg",
+			"logo_white": "logo-mission-robotics-white.svg",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "New Eagle",
+			"homepage_url": "https://neweagle.net",
+			"logo": "logo-neweagle.png",
+			"logo_white": "logo-neweagle-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "OpenADx",
+			"homepage_url": "https://openadx.eclipse.org/",
+			"logo": "logo-opencv.png",
+			"logo_white": "logo-opencv-white.png",
+			"projects": [
+				"iot.cyclonedds",
+				"technology.iceoryx",
+				"iot.zenoh"
+			]
+		},
 		{
 			"name": "OpenCV",
 			"homepage_url": "https://opencv.org/",
-			"logo": "logo-opencv.png",
-			"logo_white": "logo-opencv-white.png",
+			"logo": "logo-openadx.png",
+			"logo_white": "logo-openadx-white.svg",
 			"projects": [
 				"iot.cyclonedds"
 			]
@@ -408,15 +468,15 @@
 				"iot.paho"
 			]
 		},
-    {
-      "name": "Rightbot",
-      "homepage_url": "https://www.rightbot.in",
-      "logo": "logo-rightbot.png",
-      "logo_white": "logo-rightbot-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
+		{
+			"name": "Rightbot",
+			"homepage_url": "https://www.rightbot.in",
+			"logo": "logo-rightbot.png",
+			"logo_white": "logo-rightbot-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
 		{
 			"name": "RISE",
 			"homepage_url": "https://www.ri.se",
@@ -453,24 +513,33 @@
 				"iot.cyclonedds"
 			]
 		},
-    {
-      "name": "RYRacing, LLC",
-      "homepage_url": "http://www.ryracing.com",
-      "logo": "logo-ryracing.svg",
-      "logo_white": "logo-ryracing-white.svg",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
-    {
-      "name": "Seafloor Systems, Inc.",
-      "homepage_url": "https://www.seafloorsystems.com/",
-      "logo": "logo-seafloor.png",
-      "logo_white": "logo-seafloor-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
+		{
+			"name": "RYRacing, LLC",
+			"homepage_url": "http://www.ryracing.com",
+			"logo": "logo-ryracing.svg",
+			"logo_white": "logo-ryracing-white.svg",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "Saxion University of Applied Sciences / Mechatronics Research Group",
+			"homepage_url": "https://saxion.nl/mechatronics",
+			"logo": "logo-saxion.png",
+			"logo_white": "logo-saxion-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "Seafloor Systems, Inc.",
+			"homepage_url": "https://www.seafloorsystems.com/",
+			"logo": "logo-seafloor.png",
+			"logo_white": "logo-seafloor-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
 		{
 			"name": "Sierra Wireless",
 			"homepage_url": "https://www.sierrawireless.com/",
@@ -518,23 +587,23 @@
 				"iot.cyclonedds"
 			]
 		},
-    {
-      "name": "VectorAero AVT",
-      "homepage_url": "https://www.Vectoraero.com",
-      "logo": "logo-vectoraero.png",
-      "logo_white": "logo-vectoraero-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
-    {
-      "name": "Verizon",
-      "homepage_url": "https://thingspace.verizon.com/",
-      "logo": "logo-verizon.svg",
-      "logo_white": "logo-verizon-white.svg",
-      "projects": [
-        "iot.leshan"
-      ]
-    }
+		{
+			"name": "VectorAero AVT",
+			"homepage_url": "https://www.Vectoraero.com",
+			"logo": "logo-vectoraero.png",
+			"logo_white": "logo-vectoraero-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "Verizon",
+			"homepage_url": "https://thingspace.verizon.com/",
+			"logo": "logo-verizon.svg",
+			"logo_white": "logo-verizon-white.svg",
+			"projects": [
+				"iot.leshan"
+			]
+		}
 	]
 }
