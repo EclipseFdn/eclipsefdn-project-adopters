@@ -13,4 +13,4 @@ You can add your organization logo to our list of adopters by submitting a pull 
 If you plan on submitting a pull request, you will need to make the following changes to the website's codebase: 
 
 1. Add a colored and a white organization logo to static/assets/images/adoptors. We expect that all submitted logos to be transparent svg and compressed for web.
-2. Update the adopter JSON file: [src/main/resources/adopters.json](https://github.com/EclipseFdn/eclipsefdn-project-adopters/blob/master/src/main/resources/adopters.yml). Organizations can be easily marked as having multiple adopted projects across different working groups, no need to create separate entries for different projects or working groups!
+2. Update the adopter JSON file: [config/adopters.json](https://github.com/EclipseFdn/eclipsefdn-project-adopters/blob/master/config/adopters.json). Organizations can be easily marked as having multiple adopted projects across different working groups, no need to create separate entries for different projects or working groups!
