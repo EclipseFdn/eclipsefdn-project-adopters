@@ -94,7 +94,7 @@
 
         // check the link header as long as its set
         var linkHeader = xhttp.getResponseHeader('Link');
-        if (linkHeader !== null) {
+        if (linkHeader !== undefined) {
           var match = linkHeader.match(precompiledRegex);
           // if there is no match, then there is no next and we are on the last page and should process data through callback
           if (match !== null) {
