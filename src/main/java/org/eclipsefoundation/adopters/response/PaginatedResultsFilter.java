@@ -12,6 +12,7 @@ package org.eclipsefoundation.adopters.response;
 import java.io.IOException;
 import java.util.List;
 
+import javax.enterprise.inject.Instance;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerResponseContext;
 import javax.ws.rs.container.ContainerResponseFilter;
@@ -20,8 +21,10 @@ import javax.ws.rs.core.UriBuilder;
 import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.ext.Provider;
 
+import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.jboss.resteasy.core.ResteasyContext;
 import org.jboss.resteasy.spi.LinkHeader;
+
 
 /**
  * Adds pagination and Link headers to the response by slicing the response
@@ -33,21 +36,29 @@ import org.jboss.resteasy.spi.LinkHeader;
  */
 @Provider
 public class PaginatedResultsFilter implements ContainerResponseFilter {
-	int defaultPageSize = 10;
+	@ConfigProperty(name= "eclipse.pagination.page-size.default", defaultValue = "10")
+	Instance<Integer> defaultPageSize;
+
+	// Force scheme of header links to be a given value, useful for proxied requests
+	@ConfigProperty(name= "eclipse.pagination.scheme.enforce", defaultValue = "true")
+	Instance<Boolean> enforceLinkScheme;
+	@ConfigProperty(name= "eclipse.pagination.scheme.value", defaultValue = "https")
+	Instance<String> linkScheme;
 
 	@Override
 	public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext)
 			throws IOException {
+		int pageSize = defaultPageSize.get();
 		Object entity = responseContext.getEntity();
 		// only try and paginate if there are multiple entities
 		if (entity instanceof List) {
 			List<?> listEntity = (List<?>) entity;
 			int page = getRequestedPage(listEntity);
-			int lastPage = (int) Math.ceil((double) listEntity.size() / defaultPageSize);
+			int lastPage = (int) Math.ceil((double) listEntity.size() / pageSize);
 			// set the sliced array as the entity
 			responseContext.setEntity(
-					listEntity.subList(getArrayLimitedNumber(listEntity, Math.max(0, page - 1) * defaultPageSize),
-							getArrayLimitedNumber(listEntity, defaultPageSize * page)));
+					listEntity.subList(getArrayLimitedNumber(listEntity, Math.max(0, page - 1) * pageSize),
+							getArrayLimitedNumber(listEntity, pageSize * page)));
 
 			// add link headers for paginated page hints
 			UriBuilder builder = getUriInfo().getRequestUriBuilder();
@@ -84,7 +95,7 @@ public class PaginatedResultsFilter implements ContainerResponseFilter {
 			try {
 				int page = Integer.parseInt(params.getFirst("page"));
 				// use double cast int to allow ceil call to round up for pages
-				int maxPage = (int) Math.ceil((double) listEntity.size() / defaultPageSize);
+				int maxPage = (int) Math.ceil((double) listEntity.size() / defaultPageSize.get());
 				// get page, with min of 1 and max of last page
 				return Math.min(Math.max(1, page), maxPage);
 			} catch (NumberFormatException e) {
@@ -104,6 +115,10 @@ public class PaginatedResultsFilter implements ContainerResponseFilter {
 	 * @return fully qualified HREF for the paginated results
 	 */
 	private String buildHref(UriBuilder builder, int page) {
+		if (enforceLinkScheme.get()) {
+			return builder.scheme(linkScheme.get()).replaceQueryParam("page", page).build().toString();
+			
+		}
 		return builder.replaceQueryParam("page", page).build().toString();
 	}
 
