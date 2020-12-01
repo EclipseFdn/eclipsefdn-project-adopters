@@ -137,10 +137,10 @@
       projectOpts.project_id = project.project_id;
 
       // add the title
-      const h3 = document.createElement('h3');
-      h3.textContent = project.name;
+      const h2 = document.createElement('h2');
+      h2.textContent = project.name;
       for (var i = 0; i < el.length; i++) {
-        el[i].append(h3);
+        el[i].append(h2);
       }
       createProjectList(json_object, projectOpts, el);
     }

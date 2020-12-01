@@ -12,6 +12,6 @@
   <div class="eclipsefdn-adopters"></div>
   <script src="{{ "assets/js/eclipsefdn.adopters.js" | absURL}}"></script>
   <script>
-  eclipseFdnAdopters.getWGList({src_root: "/adopters", working_group: "{{ .Get "workingGroup" | default .Page.Params.working_group }}", ul_classes: "vertical-align list-inline"})
+  eclipseFdnAdopters.getWGList({src_root: "/adopters", working_group: "{{ .Get "workingGroup" | default .Page.Params.working_group }}", ul_classes: "vertical-align flex-wrap list-inline"})
   </script>
 </div>

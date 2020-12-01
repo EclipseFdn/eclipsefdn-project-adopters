@@ -7,12 +7,12 @@
   <pre>
   &lt;div class="eclipsefdn-adopters"&gt;&lt;/div&gt;
   &lt;script&gt;
-    eclipseFdnAdopters.getWGList({working_group: "{{ $.Params.working_group }}", ul_classes: "vertical-align list-inline"});
+    eclipseFdnAdopters.getWGList({working_group: "{{ $.Params.working_group }}", ul_classes: "vertical-align flex-wrap list-inline"});
   &lt;/script&gt;
   </pre>
   <script src="{{ "assets/js/eclipsefdn.adopters.js" | absURL}}"></script>
   <script>
-    eclipseFdnAdopters.getWGList({working_group: "{{ $.Params.working_group }}", ul_classes: "vertical-align list-inline"})
+    eclipseFdnAdopters.getWGList({working_group: "{{ $.Params.working_group }}", ul_classes: "vertical-align flex-wrap list-inline"})
   </script>
 </div>
 {{ end }}
