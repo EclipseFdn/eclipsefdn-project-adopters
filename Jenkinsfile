@@ -158,6 +158,7 @@ pipeline {
       }
       steps {
         container('kubectl') {
+          unstash name: "target"
           withKubeConfig([credentialsId: '6ad93d41-e6fc-4462-b6bc-297e360784fd', serverUrl: 'https://api.okd-c1.eclipse.org:6443']) {
             sh '''
               DEPLOYMENT="$(k8s getFirst deployment "${NAMESPACE}" "app=${APP_NAME},environment=${ENVIRONMENT}")"
