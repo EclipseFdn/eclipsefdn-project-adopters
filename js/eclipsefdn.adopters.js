@@ -141,6 +141,12 @@
       for (var i = 0; i < el.length; i++) {
         el[i].append(h2);
       }
+      const headerAnchor = document.createElement('a');
+      headerAnchor.setAttribute('class', 'btn btn-xs btn-secondary margin-left-10');
+      headerAnchor.setAttribute('href', 'https://projects.eclipse.org/projects/' + project.project_id);
+      headerAnchor.textContent = project.project_id;
+      h2.appendChild(headerAnchor);
+
       createProjectList(json_object, projectOpts, el);
     }
   }
