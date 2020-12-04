@@ -81,6 +81,19 @@ Attribute     | Type        | Default   | Description
 `ul_classes`  | *String*   | ` `   | Define classes that will be assigned to the ul element.
 `logo_white`  | *Boolean*   | `false`   | Whether or not we use the white version of the logo.
 
+##### list of working groups for param `working_group`
+- jakarta-ee
+- automotive
+- cloud-development-tools
+- internet-things-iot
+- locationtech
+- openmdm
+- polarsys
+- research
+- science
+- sparkplug
+- tangle-ee
+
 ### Declared Project Licenses
 
 This program and the accompanying materials are made available under the terms
