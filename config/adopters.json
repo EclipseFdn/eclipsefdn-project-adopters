@@ -387,8 +387,8 @@
 		{
 			"name": "OpenCV",
 			"homepage_url": "https://opencv.org/",
-			"logo": "logo-openadx.png",
-			"logo_white": "logo-openadx-white.svg",
+			"logo": "logo-opencv.png",
+			"logo_white": "logo-opencv-white.png",
 			"projects": [
 				"iot.cyclonedds"
 			]
