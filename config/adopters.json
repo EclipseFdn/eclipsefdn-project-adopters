@@ -97,7 +97,8 @@
 				"iot.hono",
 				"iot.hawkbit",
 				"iot.leshan",
-				"iot.californium"
+				"iot.californium",
+				"iot.zenoh"
 			]
 		},
 		{
@@ -375,8 +376,8 @@
 		{
 			"name": "OpenADx",
 			"homepage_url": "https://openadx.eclipse.org/",
-			"logo": "logo-opencv.png",
-			"logo_white": "logo-opencv-white.png",
+			"logo": "logo-openadx.png",
+			"logo_white": "logo-openadx-white.svg",
 			"projects": [
 				"iot.cyclonedds",
 				"technology.iceoryx",
@@ -603,6 +604,26 @@
 			"logo_white": "logo-verizon-white.svg",
 			"projects": [
 				"iot.leshan"
+			]
+		},
+		{
+			"name": "Hadabot",
+			"homepage_url": "https://www.hadabot.com/",
+			"logo": "logo-hadabot.png",
+			"logo_white": "logo-hadabot-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
+			"name": "Ampere Computing LLC.",
+			"homepage_url": "https://amperecomputing.com/",
+			"logo": "logo-amperecomputing.png",
+			"logo_white": "logo-amperecomputing-white.png",
+			"projects": [
+				"iot.cyclonedds",
+				"technology.iceoryx",
+				"iot.zenoh"
 			]
 		}
 	]
