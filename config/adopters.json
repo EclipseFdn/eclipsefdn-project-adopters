@@ -553,6 +553,15 @@
 			]
 		},
 		{
+			"name": "Soracom",
+			"homepage_url": "https://www.soracom.io/",
+			"logo": "logo-soracom.svg",
+			"logo_white": "logo-soracom-white.svg",
+			"projects": [
+				"iot.leshan"
+			]
+		},
+		{
 			"name": "The Construct",
 			"homepage_url": "http://www.theconstruct.ai",
 			"logo": "logo-construct.png",
