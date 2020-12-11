@@ -76,10 +76,24 @@ Create an HTML element containing the chosen selector:
 
 Attribute     | Type        | Default   | Description
 ---           | ---         | ---       | ---
-`project_id`   | *String*   | ` `    | **Required**: Select adopters from a specific project ID.
+`project_id`   | *String*   | ` `    | Select adopters from a specific project ID.
+`working_group`   | *String*   | ` `    | Select adopters from a specific working group ID.
 `selector`   | *String*   | `.eclipsefdn-adopters`    | Define the selector that the plugin will insert adopters into.
 `ul_classes`  | *String*   | ` `   | Define classes that will be assigned to the ul element.
 `logo_white`  | *Boolean*   | `false`   | Whether or not we use the white version of the logo.
+
+##### list of working groups for param `working_group`
+- jakarta-ee
+- automotive
+- cloud-development-tools
+- internet-things-iot
+- locationtech
+- openmdm
+- polarsys
+- research
+- science
+- sparkplug
+- tangle-ee
 
 ### Declared Project Licenses
 
