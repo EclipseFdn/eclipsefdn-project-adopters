@@ -461,12 +461,15 @@
 		},
 		{
 			"name": "Red Hat",
-			"homepage_url": "https://www.redhat.com/en/technologies/jboss-middleware/amq",
+			"homepage_url": "https://developers.redhat.com",
 			"logo": "Logo-RedHat-A-Color-RGB.svg",
 			"logo_white": "Logo-RedHat-A-White-RGB.svg",
 			"projects": [
 				"iot.hono",
-				"iot.paho"
+				"iot.paho",
+				"ecd.che",
+				"ecd.theia",
+				"ecd.jkube"
 			]
 		},
 		{
