@@ -527,6 +527,22 @@
 			]
 		},
 		{
+			"name": "SAP",
+			"homepage_url": "https://www.sap.com",
+			"logo": "logo-sap.png",
+			"logo_white": "logo-sap-white.png",
+			"projects": [
+				"ecd.dirigible",
+				"ecd.che",
+				"ecd.theia",
+				"ecd.orion",
+				"technology.jgit",
+				"technology.egit",
+				"technology.steady",
+				"tools.mat"
+			]
+		},
+		{
 			"name": "Saxion University of Applied Sciences / Mechatronics Research Group",
 			"homepage_url": "https://saxion.nl/mechatronics",
 			"logo": "logo-saxion.png",
