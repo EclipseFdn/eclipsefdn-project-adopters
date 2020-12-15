@@ -144,7 +144,12 @@
 			"logo": "logo-es.svg",
 			"logo_white": "logo-es-white.svg",
 			"projects": [
-				"iot.cyclonedds"
+                "iot.cyclonedds",
+				"ecd.che",
+				"ecd.theia",
+                "ecd.emfcloud",
+                "ecd.glsp",
+                "ecd.sprotty"
 			]
 		},
 		{
