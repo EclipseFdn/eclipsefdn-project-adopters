@@ -246,6 +246,16 @@
 			]
 		},
 		{
+			"name": "Gitpod",
+			"homepage_url": "https://www.gitpod.io/",
+			"logo": "logo-gitpod.svg",
+			"logo_white": "logo-gitpod-white.svg",
+			"projects": [
+				"ecd.openvsx",
+				"ecd.theia"
+			]
+		},
+		{
 			"name": "Hawai'i - AVTech",
 			"homepage_url": "https://www.HawaiiAVTech.com",
 			"logo": "logo-hawaiiavtech.png",
