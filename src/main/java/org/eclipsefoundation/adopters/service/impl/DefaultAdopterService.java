@@ -43,6 +43,8 @@ import org.eclipsefoundation.adopters.service.AdopterService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.Comparators;
+
 import io.quarkus.runtime.Startup;
 
 /**
@@ -206,8 +208,13 @@ public class DefaultAdopterService implements AdopterService {
 		ap.setName(p.getName());
 		ap.setLogo(p.getLogo());
 		ap.setUrl(p.getUrl());
-		ap.setAdopters(getAdopters().stream().filter(a -> a.getProjects().contains(p.getProjectId()))
-				.collect(Collectors.toList()));
+		List<Adopter> projAdopters = getAdopters().stream().filter(a -> a.getProjects().contains(p.getProjectId()))
+                .collect(Collectors.toList());
+		// natural sort by name field
+		projAdopters.sort((o1, o2) -> 
+		    o1.getName().toLowerCase().compareTo(o2.getName().toLowerCase())
+		);
+		ap.setAdopters(projAdopters);
 		return ap;
 	}
 
