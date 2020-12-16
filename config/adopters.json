@@ -668,6 +668,17 @@
 				"technology.iceoryx",
 				"iot.zenoh"
 			]
+		},
+		{
+			"name": "Tractonomy Robotics",
+			"homepage_url": "https://www.tractonomy.com",
+			"logo": "logo-tractonomy-robotics.png",
+			"logo_white": "logo-tractonomy-robotics-white.png",
+			"projects": [
+				"iot.cyclonedds",
+				"technology.iceoryx",
+				"iot.zenoh"
+			]
 		}
 	]
 }
