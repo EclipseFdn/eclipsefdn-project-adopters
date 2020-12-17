@@ -62,7 +62,6 @@
    */
   eclipseFdnAdopters.getList = function(options) {
     var opts = getMergedOptions(options);
-    console.log(opts)
     fireCall(opts, function(response) {
       createProjectList(response, opts, document.querySelectorAll(opts.selector));
     });
@@ -131,7 +130,6 @@
   }
 
   function createWGProjectsList(json_object, opts, el) {
-    console.log(json_object)
     for (const project of json_object) {
       var projectOpts = JSON.parse(JSON.stringify(opts));
       projectOpts.project_id = project.project_id;
