@@ -34,3 +34,7 @@ mix.scripts([
 mix.scripts([
     './js/eclipsefdn.adopters.js',
 ], './static/assets/js/eclipsefdn.adopters.js');
+mix.scripts([
+    './js/adopters_test.js',
+], './static/assets/js/adopters_test.js');
+
