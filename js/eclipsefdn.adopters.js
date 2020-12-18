@@ -81,7 +81,8 @@
     });
   }
 
-  function fireCall(opts, callback, currentData = []) {
+  function fireCall(opts, callback) {
+    var currentData = [];
     var xhttp = new XMLHttpRequest();
     // create callback on ready
     xhttp.onreadystatechange = function() {
@@ -131,7 +132,7 @@
   }
 
   function createWGProjectsList(json_object, opts, el) {
-    for (const project of json_object) {
+    for (var project of json_object) {
       var projectOpts = JSON.parse(JSON.stringify(opts));
       projectOpts.project_id = project.project_id;
 
