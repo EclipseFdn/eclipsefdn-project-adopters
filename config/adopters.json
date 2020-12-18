@@ -633,6 +633,17 @@
 				"iot.cyclonedds"
 			]
 		},
+    {
+      "name": "Tractonomy Robotics",
+      "homepage_url": "https://www.tractonomy.com",
+      "logo": "logo-tractonomy-robotics.png",
+      "logo_white": "logo-tractonomy-robotics-white.png",
+      "projects": [
+        "iot.cyclonedds",
+        "technology.iceoryx",
+        "iot.zenoh"
+      ]
+    },
 		{
 			"name": "Trajekt Sports Inc.",
 			"homepage_url": "http://www.trajektsports.com",
@@ -667,18 +678,7 @@
 			"logo_white": "logo-verizon-white.svg",
 			"projects": [
 				"iot.leshan"
-                        ]
-		},
-		{
-			"name": "Tractonomy Robotics",
-			"homepage_url": "https://www.tractonomy.com",
-			"logo": "logo-tractonomy-robotics.png",
-			"logo_white": "logo-tractonomy-robotics-white.png",
-			"projects": [
-				"iot.cyclonedds",
-				"technology.iceoryx",
-				"iot.zenoh"
-			]
+      ]
 		}
 	]
 }
