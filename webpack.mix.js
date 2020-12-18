@@ -35,6 +35,9 @@ mix.scripts([
     './js/eclipsefdn.adopters.js',
 ], './static/assets/js/eclipsefdn.adopters.js');
 mix.scripts([
+    './node_modules/unfetch/polyfill/index.js',
+], './static/assets/js/polyfill.js');
+mix.scripts([
     './js/adopters_test.js',
 ], './static/assets/js/adopters_test.js');
 

@@ -26,5 +26,8 @@
     "js-yaml": "^3.13.1",
     "json-minify": "^1.0.0",
     "mocha": "^7.1.2"
+  },
+  "devDependencies": {
+    "unfetch": "^4.2.0"
   }
 }

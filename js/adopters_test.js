@@ -1,16 +1,16 @@
 const eclipsefdn_adopters_element = document.querySelectorAll(".eclipsefdn-adopters")[0];
 
 function testAdopters(baseURL) {
-	fetch(`${baseURL}/assets/js/adopters.json`)
-	.then(response => {
+	fetch(baseURL + "/assets/js/adopters.json")
+	.then(function(response) {
 		if (response.ok) {
 			return response.json();
 		} else {
 			return Promise.reject(response);
 		}
 	})
-	.then(data => createWGAdopters(data.adopters, baseURL))
-	.catch(error => console.log(error))
+	.then(function(data) {createWGAdopters(data.adopters, baseURL)})
+	.catch(function(error) {console.log(error)})
 }
 
 function createWGAdopters(data, baseURL) {
@@ -46,12 +46,12 @@ function createProjectHeader(project) {
 	h2.appendChild(headerAnchor);
 	var ul = document.createElement('ul');
 	ul.setAttribute("class", "text-center list-inline");
-	ul.setAttribute("id", `${project}-ul`);
+	ul.setAttribute("id", project + "-ul");
 	eclipsefdn_adopters_element.append(ul);
 }
 
 function createAdopters(project, adopter, baseURL) {
-	var element = document.getElementById(`${project}-ul`);
+	var element = document.getElementById(project + "-ul");
 
 	// Get the home page url of this adopter
 	var url = '';
