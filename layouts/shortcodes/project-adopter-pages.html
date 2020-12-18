@@ -1,6 +1,6 @@
 <ul>
 {{ range (.Site.GetPage "/project-adopters").Pages }}
 {{ $title:= .Title }}
-<li><a href="{{.RelPermalink }}">{{ $title }}</a></li>
+<li><a href="{{ .RelPermalink }}index.html">{{ $title }}</a></li>
 {{ end }}
 </ul>
