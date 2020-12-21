@@ -81,8 +81,8 @@
     });
   }
 
-  function fireCall(opts, callback) {
-    var currentData = [];
+  function fireCall(opts, callback, currentData) {
+    var currentData = currentData || [];
     var xhttp = new XMLHttpRequest();
     // create callback on ready
     xhttp.onreadystatechange = function() {
@@ -132,7 +132,7 @@
   }
 
   function createWGProjectsList(json_object, opts, el) {
-    for (var project of json_object) {
+    json_object.forEach(function(project) {
       var projectOpts = JSON.parse(JSON.stringify(opts));
       projectOpts.project_id = project.project_id;
 
@@ -140,7 +140,7 @@
       const h2 = document.createElement('h2');
       h2.textContent = project.name;
       for (var i = 0; i < el.length; i++) {
-        el[i].append(h2);
+        el[i].appendChild(h2);
       }
       const headerAnchor = document.createElement('a');
       headerAnchor.setAttribute('class', 'btn btn-xs btn-secondary margin-left-10');
@@ -149,17 +149,18 @@
       h2.appendChild(headerAnchor);
 
       createProjectList(json_object, projectOpts, el);
-    }
+    })
   }
 
   function createProjectList(json_object, opts, el) {
     const ul = document.createElement('ul');
     if (typeof json_object !== 'undefined') {
-      for (const project of json_object) {
+      for (var j=0; j<json_object.length; j++) {
+        var project = json_object[j];
         if (opts.project_id !== project.project_id) {
           continue;
         }
-        for (const adopter of project.adopters) {
+        project.adopters.forEach(function(adopter) {
           // Get the home page url of this adopter
           var url = '';
           if (typeof adopter['homepage_url'] !== 'undefined') {
@@ -194,14 +195,14 @@
           a.appendChild(img);
           li.appendChild(a);
           ul.appendChild(li);
-        }
+        })
       }
     }
     for (var i = 0; i < el.length; i++) {
       if (opts['ul_classes'] !== '') {
         ul.setAttribute('class', opts['ul_classes']);
       }
-      el[i].append(ul);
+      el[i].appendChild(ul);
     }
   }
 
