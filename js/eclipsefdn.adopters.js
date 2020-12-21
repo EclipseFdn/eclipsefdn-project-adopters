@@ -62,8 +62,10 @@
    */
   eclipseFdnAdopters.getList = function(options) {
     var opts = getMergedOptions(options);
+    console.log(opts)
     fireCall(opts, function(response) {
       createProjectList(response, opts, document.querySelectorAll(opts.selector));
+      scrollToAnchor();
     });
   }
 
@@ -77,6 +79,7 @@
     // create callback on ready
     fireCall(opts, function(response) {
       createWGProjectsList(response, opts, document.querySelectorAll(opts.selector));
+      scrollToAnchor();
     });
   }
 
@@ -118,7 +121,7 @@
     } else {
       url = opts.src_root + opts.src_projects_prefix;
       if (opts.project_id !== undefined && opts.project_id.trim() !== '') {
-        url += opts.project_id;
+        url += '/' + opts.project_id;
       }
       if (opts.working_group !== undefined && opts.working_group.trim() !== '') {
         url += '?working_group=' + opts.working_group;
@@ -137,11 +140,12 @@
       // add the title
       const h2 = document.createElement('h2');
       h2.textContent = project.name;
+      h2.setAttribute('id', project.project_id);
       for (var i = 0; i < el.length; i++) {
         el[i].append(h2);
       }
       const headerAnchor = document.createElement('a');
-      headerAnchor.setAttribute('class', 'btn btn-xs btn-secondary margin-left-10');
+      headerAnchor.setAttribute('class', 'btn btn-xs btn-secondary margin-left-10 uppercase');
       headerAnchor.setAttribute('href', 'https://projects.eclipse.org/projects/' + project.project_id);
       headerAnchor.textContent = project.project_id;
       h2.appendChild(headerAnchor);
@@ -200,6 +204,15 @@
         ul.setAttribute('class', opts['ul_classes']);
       }
       el[i].append(ul);
+    }
+  }
+
+  // Function to scroll when there is anchor in url
+  function scrollToAnchor() {
+    if (location.hash) {
+      var projectId = location.hash.replace('#', '');
+      var element = document.getElementById(`${projectId}`);
+      element.scrollIntoView();
     }
   }
 

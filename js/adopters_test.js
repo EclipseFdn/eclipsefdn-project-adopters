@@ -31,13 +31,15 @@ function createWGAdopters(data, baseURL) {
 			createAdopters(project, data[i], baseURL);
 		}
 	}
+
+	scrollToAnchor();
 }
 
 function createProjectHeader(project) {
 	var h2 = document.createElement('h2');
 	h2.textContent = project;
 	h2.setAttribute("id", project);
-	eclipsefdn_adopters_element.append(h2);
+	eclipsefdn_adopters_element.appendChild(h2);
 	// add the button
 	var headerAnchor = document.createElement('a');
 	headerAnchor.setAttribute('class', 'btn btn-xs btn-secondary margin-left-10');
@@ -47,7 +49,7 @@ function createProjectHeader(project) {
 	var ul = document.createElement('ul');
 	ul.setAttribute("class", "text-center list-inline");
 	ul.setAttribute("id", project + "-ul");
-	eclipsefdn_adopters_element.append(ul);
+	eclipsefdn_adopters_element.appendChild(ul);
 }
 
 function createAdopters(project, adopter, baseURL) {
@@ -80,4 +82,13 @@ function createAdopters(project, adopter, baseURL) {
 	li.appendChild(a);
 
 	element.appendChild(li);
+}
+
+// Function to scroll when there is anchor in url
+function scrollToAnchor() {
+  if (location.hash) {
+    var projectId = location.hash.replace('#', '');
+    var element = document.getElementById(`${projectId}`);
+    element.scrollIntoView();
+  }
 }

@@ -28,6 +28,7 @@
     "mocha": "^7.1.2"
   },
   "devDependencies": {
+    "promise-polyfill": "^8.2.0",
     "unfetch": "^4.2.0"
   }
 }

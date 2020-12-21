@@ -34,10 +34,10 @@ mix.scripts([
 mix.scripts([
     './js/eclipsefdn.adopters.js',
 ], './static/assets/js/eclipsefdn.adopters.js');
+
+//For IE compatible with fetch
 mix.scripts([
+    './node_modules/promise-polyfill/dist/polyfill.min.js',
     './node_modules/unfetch/polyfill/index.js',
-], './static/assets/js/polyfill.js');
-mix.scripts([
     './js/adopters_test.js',
 ], './static/assets/js/adopters_test.js');
-
