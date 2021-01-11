@@ -178,6 +178,9 @@
 			"logo": "logo-ericsson.svg",
 			"logo_white": "logo-ericsson-white.svg",
 			"projects": [
+				"ecd.openvsx",
+				"ecd.sprotty",
+				"ecd.theia",
 				"iot.leshan"
 			]
 		},
