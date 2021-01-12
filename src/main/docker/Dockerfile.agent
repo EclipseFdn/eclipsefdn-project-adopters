@@ -3,11 +3,12 @@
 # Create a base image for building web+java properties. Add support for nodeJS, NPM, and mvn
 #
 ####
-FROM fabric8/java-alpine-openjdk11-jre
+FROM alpine:3.12
 
 # add mvn, npm, nodejs, hugo
 RUN apk add -U --upgrade nghttp2
 RUN apk add --update --no-cache\
+  openjdk11-jre \
   npm \
   nodejs \
   maven \
