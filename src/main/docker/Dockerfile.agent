@@ -6,11 +6,11 @@
 FROM alpine:3.12
 
 # add mvn, npm, nodejs, hugo
-RUN apk add -U --upgrade nghttp2
 RUN apk add --update --no-cache\
   openjdk11-jre \
   npm \
   nodejs \
+  nghttp2 \
   maven \
   wget \
   tar
