@@ -16,11 +16,13 @@ pluralizeListTitles = false
   keywords = ["adopters", "eclipse adopters", "eclipse project adopters"]
   gcse = "011805775785170369411:p3ec0igo0qq"
   js = "assets/js/scripts.min.js"
+  hugo_js = ""
+
 # logo = ""
   styles = "assets/css/styles.css"
 # favicon = ""
 # share_img = ""
-header_wrapper_class = "header-default-bg-img"
+  header_wrapper_class = "header-default-bg-img"
 # logo_width = ""
 # header_left_classes = ""
 # main_menu_wrapper_classes = ""
