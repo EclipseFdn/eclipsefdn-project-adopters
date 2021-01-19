@@ -412,6 +412,15 @@
 			]
 		},
 		{
+			"name": "Onivim 2",
+			"homepage_url": "https://v2.onivim.io",
+			"logo": "logo-onivim.svg",
+			"logo_white": "logo-onivim-white.svg",
+			"projects": [
+				"ecd.openvsx"
+			]
+		},
+		{
 			"name": "OpenADx",
 			"homepage_url": "https://openadx.eclipse.org/",
 			"logo": "logo-openadx.png",
