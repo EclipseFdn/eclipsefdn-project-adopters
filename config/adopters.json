@@ -79,12 +79,13 @@
 			]
 		},
 		{
-			"name": "ARM",
+			"name": "Arm",
 			"homepage_url": "https://www.arm.com/",
 			"logo": "logo-arm.svg",
 			"logo_white": "logo-arm-white.svg",
 			"projects": [
-				"iot.cyclonedds"
+				"iot.cyclonedds",
+				"ecd.theia"
 			]
 		},
 		{
