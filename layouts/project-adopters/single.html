@@ -1,14 +1,16 @@
 {{ define "main"}}
 <div id="content">
-  {{ .Content }}
-  
-  <div class="eclipsefdn-adopters"></div>
-  <p>Sample code used for this page:</p>
+  <p>If you are using Hugo Solstice Theme, the sample shortcode used for this page:</p>
+  <pre>
+  &#123;&#123;< eclipsefdn_adopters working_group="{{ $.Params.working_group }}" >&#125;&#125;</pre>
+
+  <p>If you are using our Adopters JavaScript, the sample code used for this page:</p>
   <pre>
   &lt;div class="eclipsefdn-adopters"&gt;&lt;/div&gt;
   &lt;script&gt;
     eclipseFdnAdopters.getWGList({working_group: "{{ $.Params.working_group }}", ul_classes: "text-center list-inline"});
-  &lt;/script&gt;
-  </pre>
+  &lt;/script&gt;</pre>
+
+  {{ .Content }}
 </div>
 {{ end }}
