@@ -43,8 +43,8 @@ header_wrapper_class = "header-default-bg-img"
   hrefTargetBlank = true
 
 [[menu.main]]
-    name = "White logo"
-    url = "/adopters_white"
+    name = "Test"
+    url = "/test-new-adopters"
     weight = 1
 
 [[menu.main]]

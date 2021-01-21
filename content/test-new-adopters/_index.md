@@ -13,6 +13,8 @@ hide_page_title: true
 
 # About
 
+This is a test page without live server to check your newly added adopters.
+
 Eclipse community of adopters is growing! Innovative organizations of all sizes and across industry sectors are committed to accelerating the adoption of commercial-grade, production-ready open source technologies developed by the Eclipse community.  
 
 Do you use Eclipse technologies? Show your support for open source by adding your logo to this page. Please **[create an issue](https://github.com/EclipseFdn/eclipsefdn-project-adopters/issues/new?template=adopter_request.md)** to add your logo below.
@@ -20,8 +22,4 @@ Do you use Eclipse technologies? Show your support for open source by adding you
 This is only for testing, just a way of displaying logos w/ a list of associated projects. 
 Its just a quick way of checking that your data is properly formatted and has the right projects associated.
 
-{{< page-adopters >}}
-
-## Currently available Working Group sub-pages
-
-{{< project-adopter-pages >}}
+{{< page-adopters-test >}}
