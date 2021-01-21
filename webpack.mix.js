@@ -19,7 +19,7 @@ mix.setResourceRoot('../');
 mix.less('./less/styles.less', './static/assets/css/styles.css');
 
 // JavaScript
-mix.scripts([
+mix.babel([
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/bootstrap/dist/js/bootstrap.min.js',
     './node_modules/jquery-match-height/dist/jquery.matchHeight-min.js',
@@ -31,8 +31,8 @@ mix.scripts([
     './node_modules/eclipsefdn-solstice-assets/js/solstice.cookies.js',
     './node_modules/eclipsefdn-solstice-assets/js/solstice.js'
 ], './static/assets/js/scripts.min.js');
-mix.scripts([
-    './js/eclipsefdn.adopters.js',
+mix.babel([
+    './node_modules/eclipsefdn-solstice-assets/js/eclipsefdn.adopters.js',
 ], './static/assets/js/eclipsefdn.adopters.js');
 
 //For IE compatible with fetch
