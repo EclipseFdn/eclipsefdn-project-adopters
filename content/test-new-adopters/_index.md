@@ -13,6 +13,6 @@ hide_page_title: true
 
 # About
 
-This page was designed as a way to test new adopters locally without a live API server with the additional adopters' changes. For live assets and instructions on requesting your logo be added, the home page of the adopters project should be viewed.
+This page was designed as a way to test new adopters locally without a live API server with the additional adopters' changes. For live assets and instructions on requesting your logo be added, the [home page of the adopters project](/adopters) should be viewed.
 
 {{< page-adopters-test >}}
