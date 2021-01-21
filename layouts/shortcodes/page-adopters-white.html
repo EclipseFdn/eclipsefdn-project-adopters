@@ -1,0 +1,12 @@
+<h2>Who is using {{ .Page.Params.project_id }}?</h2>
+<div class="eclipsefdn-adopters" style="background: #3a8c9a;"></div> 
+
+<script src="{{ .Site.BaseURL }}/assets/js/eclipsefdn.adopters.js"></script>
+<script>
+    eclipseFdnAdopters.getList({
+        project_id: "{{ .Page.Params.project_id }}",
+        selector: ".eclipsefdn-adopters",
+        ul_classes: "text-center list-inline",
+        logo_white: true
+    });
+</script>

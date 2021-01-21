@@ -43,16 +43,21 @@ header_wrapper_class = "header-default-bg-img"
   hrefTargetBlank = true
 
 [[menu.main]]
+    name = "White logo"
+    url = "/adopters_white"
+    weight = 1
+
+[[menu.main]]
     name = "Projects"
     url = "https://www.eclipse.org/projects/"
-    weight = 1
+    weight = 2
 
 [[menu.main]]
     name = "Working Groups"
     url = "https://www.eclipse.org/org/workinggroups/"
-    weight = 2
+    weight = 3
 
 [[menu.main]]
     name = "Members"
     url = "https://www.eclipse.org/membership/"
-    weight = 3
+    weight = 4
