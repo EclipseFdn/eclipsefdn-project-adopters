@@ -96,7 +96,7 @@ Attribute     | Type        | Default   | Description
 - tangle-ee
 
 #### Testing
-Please refer to "/test-new-adopters" to check the new added adopters are correctly rendered.
+After creating a pull request, please refer to "/test-new-adopters" on the preview link to check the new added adopters are correctly rendered.
 
 ### Declared Project Licenses
 
