@@ -95,6 +95,9 @@ Attribute     | Type        | Default   | Description
 - sparkplug
 - tangle-ee
 
+#### Testing
+Please refer to "/test-new-adopters" to check the new added adopters are correctly rendered.
+
 ### Declared Project Licenses
 
 This program and the accompanying materials are made available under the terms
