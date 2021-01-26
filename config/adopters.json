@@ -132,6 +132,15 @@
 			]
 		},
 		{
+			"name": "Broadcom Inc.",
+			"homepage_url": "https://www.broadcom.com/solutions/mainframe",
+			"logo": "logo-broadcom.png",
+			"logo_white": "logo-broadcom-white.png",
+			"projects": [
+				"ecd.che"
+      		]
+		},
+		{
 			"name": "CentraleSupelec, CNRS, Signals and Systems Laboratory",
 			"homepage_url": "https://www.l2s.centralesupelec.fr/en/",
 			"logo": "logo-centralesupelec.png",
@@ -692,15 +701,6 @@
 			"logo_white": "logo-verizon-white.svg",
 			"projects": [
 				"iot.leshan"
-      		]
-		},
-		{
-			"name": "Broadcom Inc.",
-			"homepage_url": "https://www.broadcom.com/solutions/mainframe",
-			"logo": "logo-broadcom.png",
-			"logo_white": "logo-broadcom-white.png",
-			"projects": [
-				"ecd.che"
       		]
 		}
 	]
