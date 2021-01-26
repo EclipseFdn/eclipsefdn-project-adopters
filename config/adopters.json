@@ -49,17 +49,17 @@
 				"iot.hono"
 			]
 		},
-    {
-      "name": "Ampere Computing LLC.",
-      "homepage_url": "https://amperecomputing.com/",
-      "logo": "logo-amperecomputing.png",
-      "logo_white": "logo-amperecomputing-white.png",
-      "projects": [
-        "iot.cyclonedds",
-        "technology.iceoryx",
-        "iot.zenoh"
-      ]
-    },
+    	{
+    	  "name": "Ampere Computing LLC.",
+    	  "homepage_url": "https://amperecomputing.com/",
+    	  "logo": "logo-amperecomputing.png",
+    	  "logo_white": "logo-amperecomputing-white.png",
+    	  "projects": [
+    	    "iot.cyclonedds",
+    	    "technology.iceoryx",
+    	    "iot.zenoh"
+    	  ]
+    	},
 		{
 			"name": "AutoCore.ai",
 			"homepage_url": "http://www.autocore.ai/",
@@ -130,6 +130,15 @@
 			"projects": [
 				"iot.cyclonedds"
 			]
+		},
+		{
+			"name": "Broadcom Inc.",
+			"homepage_url": "https://www.broadcom.com/solutions/mainframe",
+			"logo": "logo-broadcom.png",
+			"logo_white": "logo-broadcom-white.png",
+			"projects": [
+				"ecd.che"
+      		]
 		},
 		{
 			"name": "CentraleSupelec, CNRS, Signals and Systems Laboratory",
@@ -284,15 +293,15 @@
 				"ecd.theia"
 			]
 		},
-    {
-      "name": "Hadabot",
-      "homepage_url": "https://www.hadabot.com/",
-      "logo": "logo-hadabot.png",
-      "logo_white": "logo-hadabot-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    },
+    	{
+    	  "name": "Hadabot",
+    	  "homepage_url": "https://www.hadabot.com/",
+    	  "logo": "logo-hadabot.png",
+    	  "logo_white": "logo-hadabot-white.png",
+    	  "projects": [
+    	    "iot.cyclonedds"
+    	  ]
+    	},
 		{
 			"name": "Hawai'i - AVTech",
 			"homepage_url": "https://www.HawaiiAVTech.com",
@@ -656,17 +665,17 @@
 				"iot.cyclonedds"
 			]
 		},
-    {
-      "name": "Tractonomy Robotics",
-      "homepage_url": "https://www.tractonomy.com",
-      "logo": "logo-tractonomy-robotics.png",
-      "logo_white": "logo-tractonomy-robotics-white.png",
-      "projects": [
-        "iot.cyclonedds",
-        "technology.iceoryx",
-        "iot.zenoh"
-      ]
-    },
+    	{
+    	  "name": "Tractonomy Robotics",
+    	  "homepage_url": "https://www.tractonomy.com",
+    	  "logo": "logo-tractonomy-robotics.png",
+    	  "logo_white": "logo-tractonomy-robotics-white.png",
+    	  "projects": [
+    	    "iot.cyclonedds",
+    	    "technology.iceoryx",
+    	    "iot.zenoh"
+    	  ]
+    	},
 		{
 			"name": "Trajekt Sports Inc.",
 			"homepage_url": "http://www.trajektsports.com",
