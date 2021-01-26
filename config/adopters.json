@@ -692,7 +692,16 @@
 			"logo_white": "logo-verizon-white.svg",
 			"projects": [
 				"iot.leshan"
-      ]
+      		]
+		},
+		{
+			"name": "Eclipse Hono project",
+			"homepage_url": "https://www.eclipse.org/hono/",
+			"logo": "logo-hono.svg",
+			"logo_white": "logo-hono-white.svg",
+			"projects": [
+				"iot.californium"
+      		]
 		}
 	]
 }
