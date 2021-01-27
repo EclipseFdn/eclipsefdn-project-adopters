@@ -395,6 +395,17 @@
 			]
 		},
 		{
+			"name": "Logi.cals",
+			"homepage_url": "https://logicals.com/en/",
+			"logo": "logo-logicals.svg",
+			"logo_white": "logo-logicals-white.svg",
+			"projects": [
+				"ecd.che",
+				"ecd.glsp",
+				"ecd.theia"
+			]
+		},
+		{
 			"name": "Mapless AI, Inc.",
 			"homepage_url": "https://mapless.ai",
 			"logo": "logo-maplessai.svg",
