@@ -332,6 +332,17 @@
 			]
 		},
 		{
+			"name": "IBM",
+			"homepage_url": "https://www.ibm.com/products/wazi-developer",
+			"logo": "logo-ibm.png",
+			"logo_white": "logo-ibm-white.png",
+			"projects": [
+				"ecd.che",
+				"ecd.theia",
+				"ecd.openvsx"
+			]
+		},
+		{
 			"name": "Intel robotics project",
 			"homepage_url": "https://www.intel.com/content/www/us/en/internet-of-things/overview.html",
 			"logo": "logo-intel.png",
