@@ -98,11 +98,30 @@ pipeline {
                 limits:
                   cpu: 2
                   memory: 4Gi
+              env:
+              - name: "MAVEN_OPTS"
+                value: "-Duser.home=/home/jenkins"
+              volumeMounts:
+              - name: settings-xml
+                mountPath: /home/jenkins/.m2/settings.xml
+                subPath: settings.xml
+                readOnly: true
+              - name: m2-repo
+                mountPath: /home/jenkins/.m2/repository
             - name: jnlp
               resources:
                 limits:
                   cpu: 2
                   memory: 4Gi
+            volumes:
+            - name: settings-xml
+              secret:
+                secretName: m2-secret-dir
+                items:
+                - key: settings.xml
+                  path: settings.xml
+            - name: m2-repo
+              emptyDir: {}
           '''
         }
       }
