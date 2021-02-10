@@ -710,6 +710,17 @@
 			]
 		},
 		{
+			"name": "TypeFox",
+			"homepage_url": "https://www.typefox.io/",
+			"logo": "logo-typefox.png",
+			"logo_white": "logo-typefox-white.png",
+			"projects": [
+				"ecd.openvsx",
+				"ecd.sprotty",
+				"ecd.theia"
+			]
+		},
+		{
 			"name": "University of Hawai`i",
 			"homepage_url": "https://www.hawaii.edu/",
 			"logo": "logo-university-hawaii.png",
