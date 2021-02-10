@@ -66,3 +66,11 @@ The project maintains the following source code repositories:
 ### jquery.matchHeight.js (^0.7.2)
 
 * License: The MIT License (MIT)
+
+### promise-polyfill (^8.2.0)
+
+* License: The MIT License (MIT)
+
+### unfetch (^4.2.0)
+
+* License: The MIT License (MIT)

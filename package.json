@@ -12,18 +12,25 @@
     "url": "git://github.com/EclipseFdn/eclipsefdn-project-adopters.git"
   },
   "scripts": {
+    "test": "jsonlint config/adopters.json",
     "build": "npm run production && npm run minify_adopters && rm -rf src/main/resources/META-INF/resources/* && hugo -d src/main/resources/META-INF/resources/",
     "build_netlify": "npm run production && npm run disallow_robots_txt",
     "minify_adopters": "mkdir -p target/config && ./node_modules/json-minify/index.js config/adopters.json > target/config/adopters.json",
     "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "disallow_robots_txt": "echo \"User-agent: *\r\nDisallow: /\" > layouts/robots.txt"
+    "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npm run adopters_json && npm run test",
+    "disallow_robots_txt": "echo \"User-agent: *\r\nDisallow: /\" > layouts/robots.txt",
+    "adopters_json": "cp config/adopters.json static/assets/js"
   },
   "dependencies": {
     "chai": "^4.2.0",
-    "eclipsefdn-hugo-solstice-theme": "0.0.106",
+    "eclipsefdn-hugo-solstice-theme": "0.0.109",
     "js-yaml": "^3.13.1",
     "json-minify": "^1.0.0",
+    "jsonlint": "^1.6.3",
     "mocha": "^7.1.2"
+  },
+  "devDependencies": {
+    "promise-polyfill": "^8.2.0",
+    "unfetch": "^4.2.0"
   }
 }
