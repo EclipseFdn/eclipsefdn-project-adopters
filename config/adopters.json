@@ -672,6 +672,15 @@
 			]
 		},
 		{
+			"name": "SyMetric",
+			"homepage_url": "https://www.symetricsystems.com/",
+			"logo": "logo-symetric.svg",
+			"logo_white": "logo-symetric-white.svg",
+			"projects": [
+				"ecd.dirigible"
+			]
+		},
+		{
 			"name": "The Construct",
 			"homepage_url": "http://www.theconstruct.ai",
 			"logo": "logo-construct.png",
