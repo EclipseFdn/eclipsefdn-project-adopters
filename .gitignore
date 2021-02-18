@@ -1,6 +1,7 @@
 /node_modules/
 /public
 .project
+.DS_Store
 /target/
 /src/main/resources/META-INF/resources/ 
 /bin/
