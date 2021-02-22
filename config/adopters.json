@@ -19,6 +19,15 @@
 			]
 		},
 		{
+			"name": "Acquia",
+			"homepage_url": "https://www.acquia.com/",
+			"logo": "logo-acquia.png",
+			"logo_white": "logo-acquia-white.png",
+			"projects": [
+				"ecd.theia"
+			]
+		},
+		{
 			"name": "ADLINK Technology",
 			"homepage_url": "https://www.adlinktech.com",
 			"logo": "logo-adlink.svg",
