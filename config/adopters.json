@@ -171,6 +171,15 @@
 			]
 		},
 		{
+			"name": "Digital Lights",
+			"homepage_url": "https://lights.digital",
+			"logo": "logo-digital-lights.png",
+			"logo_white": "logo-digital-lights-white.png",
+			"projects": [
+				"ecd.dirigible"
+			]
+		},
+		{
 			"name": "EclipseSource",
 			"homepage_url": "https://eclipsesource.com/",
 			"logo": "logo-es.svg",
