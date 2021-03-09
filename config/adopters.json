@@ -681,6 +681,15 @@
 			]
 		},
 		{
+			"name": "Cumulocity IoT by Software AG",
+			"homepage_url": "https://www.softwareag.cloud/site/product/cumulocity-iot.html",
+			"logo": "logo-cumulocity-by-softwareag.svg",
+			"logo_white": "logo-cumulocity-by-softwareag-white.svg",
+			"projects": [
+				"iot.leshan"
+			]
+		},
+		{
 			"name": "Soracom",
 			"homepage_url": "https://www.soracom.io/",
 			"logo": "logo-soracom.svg",
