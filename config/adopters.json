@@ -400,6 +400,15 @@
 			]
 		},
 		{
+			"name": "Kopernikus Automotive GmbH",
+			"homepage_url": "http://www.kopernikusauto.com",
+			"logo": "logo-kopernikus-auto.png",
+			"logo_white": "logo-opernikus-auto-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
 			"name": "Kynetics",
 			"homepage_url": "http://kynetics.com",
 			"logo": "logo-kynetics.png",
