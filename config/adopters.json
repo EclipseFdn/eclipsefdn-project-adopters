@@ -801,6 +801,15 @@
 			"projects": [
 				"iot.leshan"
 			]
+		},
+		{
+			"name": "VSCodium",
+			"homepage_url": "https://vscodium.com",
+			"logo": "logo-vscodium.svg",
+			"logo_white": "logo-vscodium-white.svg",
+			"projects": [
+				"ecd.openvsx"
+			]
 		}
 	]
 }
