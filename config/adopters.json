@@ -285,6 +285,15 @@
 			]
 		},
 		{
+			"name": "Futurewei",
+			"homepage_url": "https://www.futurewei.com/",
+			"logo": "logo-futurewei.png",
+			"logo_white": "logo-futurewei-white.png",
+			"projects": [
+				"iot.zenoh"
+			]
+		},
+		{
 			"name": "Foxconn",
 			"homepage_url": "https://www.foxconn.com/en-us/",
 			"logo": "logo-foxconn.png",
@@ -811,14 +820,14 @@
 				"ecd.openvsx"
 			]
 		},
-    {
-      "name": "WUT Driverless",
-      "homepage_url": "https://www.indyautonomouschallenge.com/warsaw-university-of-technology",
-      "logo": "logo-wut-driverless.png",
-      "logo_white": "logo-wut-driverless-white.png",
-      "projects": [
-        "iot.cyclonedds"
-      ]
-    }
+		{
+			"name": "WUT Driverless",
+			"homepage_url": "https://www.indyautonomouschallenge.com/warsaw-university-of-technology",
+			"logo": "logo-wut-driverless.png",
+			"logo_white": "logo-wut-driverless-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		}
 	]
 }
