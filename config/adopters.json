@@ -596,6 +596,15 @@
 			]
 		},
 		{
+			"name": "RATP Smart Systems",
+			"homepage_url": "https://www.ratpsmartsystems.com",
+			"logo": "logo-ratp-smart-systems.png",
+			"logo_white": "logo-ratp-smart-systems-white.png",
+			"projects": [
+				"iot.keyple"
+			]
+		},
+		{
 			"name": "Red Hat",
 			"homepage_url": "https://developers.redhat.com",
 			"logo": "Logo-RedHat-A-Color-RGB.svg",
