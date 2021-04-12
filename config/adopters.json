@@ -810,6 +810,15 @@
 			"projects": [
 				"ecd.openvsx"
 			]
-		}
+		},
+    {
+      "name": "WUT Driverless",
+      "homepage_url": "https://www.indyautonomouschallenge.com/warsaw-university-of-technology",
+      "logo": "logo-wut-driverless.png",
+      "logo_white": "logo-wut-driverless-white.png",
+      "projects": [
+        "iot.cyclonedds"
+      ]
+    }
 	]
 }
