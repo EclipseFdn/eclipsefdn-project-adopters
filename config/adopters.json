@@ -793,15 +793,24 @@
 				"iot.cyclonedds"
 			]
 		},
-    {
-      "name": "Verizon",
-      "homepage_url": "https://thingspace.verizon.com/",
-      "logo": "logo-verizon.svg",
-      "logo_white": "logo-verizon-white.svg",
-      "projects": [
-        "iot.leshan"
-      ]
-    },
+		{
+			"name": "Verizon",
+			"homepage_url": "https://thingspace.verizon.com/",
+			"logo": "logo-verizon.svg",
+			"logo_white": "logo-verizon-white.svg",
+			"projects": [
+				"iot.leshan"
+			]
+		},
+		{
+			"name": "VSCodium",
+			"homepage_url": "https://vscodium.com",
+			"logo": "logo-vscodium.svg",
+			"logo_white": "logo-vscodium-white.svg",
+			"projects": [
+				"ecd.openvsx"
+			]
+		},
     {
       "name": "WUT Driverless",
       "homepage_url": "https://www.indyautonomouschallenge.com/warsaw-university-of-technology",
