@@ -501,6 +501,15 @@
 			]
 		},
 		{
+			"name": "OneWave",
+			"homepage_url": "https://onewave.io/transport",
+			"logo": "logo-onewave.png",
+			"logo_white": "logo-onewave-white.png",
+			"projects": [
+				"iot.keyple"
+			]
+		},
+		{
 			"name": "Onivim 2",
 			"homepage_url": "https://v2.onivim.io",
 			"logo": "logo-onivim.svg",
