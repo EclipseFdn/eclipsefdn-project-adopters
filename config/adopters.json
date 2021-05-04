@@ -745,6 +745,15 @@
 			]
 		},
 		{
+			"name": "Spirtech",
+			"homepage_url": "https://spirtech.com/",
+			"logo": "logo-spirtech.png",
+			"logo_white": "logo-spirtech-white.png",
+			"projects": [
+				"iot.keyple"
+			]
+		},
+		{
 			"name": "SyMetric",
 			"homepage_url": "https://www.symetricsystems.com/",
 			"logo": "logo-symetric.svg",
