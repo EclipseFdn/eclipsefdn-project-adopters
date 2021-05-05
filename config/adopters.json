@@ -265,6 +265,15 @@
 			]
 		},
 		{
+			"name": "Famoco",
+			"homepage_url": "https://www.famoco.com/",
+			"logo": "logo-famoco.png",
+			"logo_white": "logo-famoco-white.png",
+			"projects": [
+				"iot.keyple"
+			]
+		},
+		{
 			"name": "FARobot",
 			"homepage_url": "https://www.farobottech.com/",
 			"logo": "logo-farobot.png",
