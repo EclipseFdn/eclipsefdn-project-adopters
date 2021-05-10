@@ -109,7 +109,7 @@
 		},
 		{
 			"name": "Bosch.IO",
-			"homepage_url": "https://www.bosch-iot-suite.com/service/hub/",
+			"homepage_url": "https://bosch-iot-suite.com",
 			"logo": "logo-bosch.svg",
 			"logo_white": "logo-bosch-white.svg",
 			"projects": [
