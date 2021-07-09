@@ -234,6 +234,15 @@
 			]
 		},
 		{
+			"name": "eTactica",
+			"homepage_url": "https://etactica.com/",
+			"logo": "logo-etactica.svg",
+			"logo_white": "logo-etactica-white.svg",
+			"projects": [
+				"iot.mosquitto"
+			]
+		},
+		{
 			"name": "Eurotech",
 			"homepage_url": "https://www.eurotech.com",
 			"logo": "logo-eurotech.svg",
