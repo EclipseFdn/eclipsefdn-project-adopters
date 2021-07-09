@@ -587,6 +587,15 @@
 			]
 		},
 		{
+			"name": "Orange",
+			"homepage_url": "https://www.orange.com/",
+			"logo": "logo-orange.svg",
+			"logo_white": "logo-open-orange-white.svg",
+			"projects": [
+				"iot.leshan"
+			]
+		},
+		{
 			"name": "othermo",
 			"homepage_url": "https://othermo.de",
 			"logo": "logo-othermo.svg",
