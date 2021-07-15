@@ -781,6 +781,16 @@
 			]
 		},
 		{
+			"name": "ThingsBoard",
+			"homepage_url": "https://thingsboard.io/",
+			"logo": "logo-thingsboard.svg",
+			"logo_white": "logo-thingsboard-white.svg",
+			"projects": [
+				"iot.leshan",
+				"iot.californium"
+			]
+		},
+		{
 			"name": "Tier IV",
 			"homepage_url": "https://tier4.jp/en/",
 			"logo": "logo-tier-iv.png",
