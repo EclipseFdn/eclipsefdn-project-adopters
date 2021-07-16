@@ -323,6 +323,17 @@
 			]
 		},
 		{
+			"name": "Gambit Communications",
+			"homepage_url": "https://www.gambitcomm.com/",
+			"logo": "logo-gambit-communications.png",
+			"logo_white": "logo-gambit-communications-white.png",
+			"projects": [
+				"iot.hono",
+				"iot.tahu",
+				"iot.vorto"
+			]
+		},
+		{
 			"name": "Ghost Robotics",
 			"homepage_url": "https://www.ghostrobotics.io/",
 			"logo": "logo-ghostrobotics.png",
