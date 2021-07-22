@@ -784,6 +784,15 @@
 			]
 		},
 		{
+			"name": "Streamsheets",
+			"homepage_url": "http://www.cedalo.com/streamsheets",
+			"logo": "logo-streamsheets.png",
+			"logo_white": "logo-streamsheets-white.png",
+			"projects": [
+				"iot.mosquitto"
+			]
+		},
+		{
 			"name": "SyMetric",
 			"homepage_url": "https://www.symetricsystems.com/",
 			"logo": "logo-symetric.svg",
