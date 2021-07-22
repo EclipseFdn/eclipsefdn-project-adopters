@@ -152,6 +152,16 @@
 			]
 		},
 		{
+			"name": "Cedalo AG",
+			"homepage_url": "http://www.cedalo.com/",
+			"logo": "logo-cedaloag.png",
+			"logo_white": "logo-cedaloag-white.png",
+			"projects": [
+				"iot.mosquitto",
+				"iot.streamsheets"
+			]
+		},
+		{
 			"name": "CentraleSupelec, CNRS, Signals and Systems Laboratory",
 			"homepage_url": "https://www.l2s.centralesupelec.fr/en/",
 			"logo": "logo-centralesupelec.png",
