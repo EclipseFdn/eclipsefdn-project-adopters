@@ -569,7 +569,7 @@
 			"name": "Orange",
 			"homepage_url": "https://www.orange.com/",
 			"logo": "logo-orange.png",
-			"logo_white": "logo-open-orange-white.png",
+			"logo_white": "logo-orange-white.png",
 			"projects": [
 				"iot.leshan"
 			]
