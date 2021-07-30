@@ -879,6 +879,15 @@
 			]
 		},
 		{
+			"name": "Vector",
+			"homepage_url": "https://www.vector.com/int/en/",
+			"logo": "logo-vector.png",
+			"logo_white": "logo-vector-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
 			"name": "VectorAero AVT",
 			"homepage_url": "https://www.Vectoraero.com",
 			"logo": "logo-vectoraero.png",
