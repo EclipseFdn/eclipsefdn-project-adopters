@@ -888,6 +888,15 @@
 			]
 		},
 		{
+			"name": "USGS Volcano Hazards Program",
+			"homepage_url": "https://www.usgs.gov/natural-hazards/volcano-hazards/",
+			"logo": "logo-usgs.svg",
+			"logo_white": "logo-usgs-white.svg",
+			"projects": [
+				"iot.mosquitto"
+			]
+		},
+		{
 			"name": "Vector",
 			"homepage_url": "https://www.vector.com/int/en/",
 			"logo": "logo-vector.png",
