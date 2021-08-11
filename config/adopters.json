@@ -638,7 +638,7 @@
 			"logo": "logo-picknik.png",
 			"logo_white": "logo-picknik-white.png",
 			"projects": [
-				"iot.cyclonedds"
+				"iot.cyclonedds" 
 			]
 		},
 		{
