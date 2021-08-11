@@ -633,6 +633,15 @@
 			]
 		},
 		{
+			"name": "PickNik",
+			"homepage_url": "https://picknik.ai/",
+			"logo": "logo-picknik.png",
+			"logo_white": "logo-picknik-white.png",
+			"projects": [
+				"iot.cyclonedds"
+			]
+		},
+		{
 			"name": "pragmatic industries GmbH",
 			"homepage_url": "https://pragmaticindustries.com/",
 			"logo": "logo-pragmatic-industries.svg",
