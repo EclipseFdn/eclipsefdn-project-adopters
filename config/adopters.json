@@ -70,6 +70,16 @@
 			]
 		},
 		{
+			"name": "Apex.AI",
+			"homepage_url": "https://www.apex.ai/",
+			"logo": "logo-apexai.png",
+			"logo_white": "logo-apexai-white.png",
+			"projects": [
+				"iot.cyclonedds",
+				"technology.iceoryx"
+			]
+		},
+		{
 			"name": "AutoCore.ai",
 			"homepage_url": "http://www.autocore.ai/",
 			"logo": "autocore-ai.png",
