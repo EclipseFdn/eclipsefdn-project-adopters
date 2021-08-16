@@ -672,6 +672,15 @@
 			]
 		},
 		{
+			"name": "RADON",
+			"homepage_url": "https://radon-h2020.eu/",
+			"logo": "logo-radon.png",
+			"logo_white": "logo-radon-white.png",
+			"projects": [
+				"ecd.che"
+			]
+		},
+		{
 			"name": "RATP Smart Systems",
 			"homepage_url": "https://www.ratpsmartsystems.com",
 			"logo": "logo-ratp-smart-systems.png",
