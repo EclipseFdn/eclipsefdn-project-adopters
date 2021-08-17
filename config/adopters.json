@@ -314,6 +314,15 @@
 			]
 		},
 		{
+			"name": "flx:business",
+			"homepage_url": "https://flx-business.de/",
+			"logo": "logo-flxbusiness.png",
+			"logo_white": "logo-flxbusiness-white.png",
+			"projects": [
+				"iot.streamsheets"
+			]
+		},
+		{
 			"name": "Freedom Robotics",
 			"homepage_url": "https://www.freedomrobotics.ai/",
 			"logo": "logo-freedom-robotics.png",
