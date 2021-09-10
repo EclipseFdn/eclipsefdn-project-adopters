@@ -133,6 +133,15 @@
 			]
 		},
 		{
+			"name": "Bosch Rexroth AG",
+			"homepage_url": "https://www.boschrexroth.com/",
+			"logo": "logo-bosch-rexroth-ag.png",
+			"logo_white": "logo-bosch-rexroth-ag-white.png",
+			"projects": [
+				"iot.mosquitto"
+			]
+		},
+		{
 			"name": "Box Robotics, Inc.",
 			"homepage_url": "http://boxrobotics.ai",
 			"logo": "logo-box-robotics.png",
