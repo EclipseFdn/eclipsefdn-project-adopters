@@ -162,6 +162,15 @@
 			]
 		},
 		{
+			"name": "Cassens",
+			"homepage_url": "https://www.cassens.com/",
+			"logo": "logo-cassens.png",
+			"logo_white": "logo-cassens-white.png",
+			"projects": [
+				"iot.mosquitto"
+			]
+		},
+		{
 			"name": "Cedalo AG",
 			"homepage_url": "http://www.cedalo.com/",
 			"logo": "logo-cedaloag.png",
