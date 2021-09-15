@@ -1,9 +1,0 @@
-language: node_js
-node_js:
-  - "12"
-install:
-- npm ci
-- wget https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_0.62.2_Linux-64bit.deb
-- sudo dpkg -i hugo*.deb
-script:
-- hugo
