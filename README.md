@@ -1,7 +1,5 @@
 # eclipsefdn-project-adopters
 
-[![Build Status](https://travis-ci.org/EclipseFdn/eclipsefdn-project-adopters.svg?branch=master)](https://travis-ci.org/EclipseFdn/eclipsefdn-project-adopters)
-
 ## Getting started
 
 Install dependencies, build website and start a simple webserver:
