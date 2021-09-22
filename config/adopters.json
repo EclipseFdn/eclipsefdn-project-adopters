@@ -465,6 +465,15 @@
 			]
 		},
 		{
+			"name": "IoT.nxt",
+			"homepage_url": "https://www.iotnxt.com/",
+			"logo": "logo-iot-nxt.png",
+			"logo_white": "logo-iot-nxt-white.png",
+			"projects": [
+				"iot.mosquitto"
+			]
+		},
+		{
 			"name": "itemis AG",
 			"homepage_url": "https://www.itemis.com",
 			"logo": "logo-itemis.png",
@@ -845,6 +854,15 @@
 			"logo_white": "logo-spirtech-white.png",
 			"projects": [
 				"iot.keyple"
+			]
+		},
+		{
+			"name": "Steinbeis-Transferzentrum Industrielle Digitalisierung",
+			"homepage_url": "https://idhorb.de/",
+			"logo": "logo-steinbeis-transferzentrum-industrielle-digitalisierung.png",
+			"logo_white": "logo-steinbeis-transferzentrum-industrielle-digitalisierung-white.png",
+			"projects": [
+				"iot.streamsheets"
 			]
 		},
 		{
