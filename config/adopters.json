@@ -80,6 +80,15 @@
 			]
 		},
 		{
+			"name": "Arburg",
+			"homepage_url": "https://www.arburg.com/en/",
+			"logo": "logo-arburg.png",
+			"logo_white": "logo-arburg-white.png",
+			"projects": [
+				"iot.streamsheets"
+			]
+		},
+		{
 			"name": "AutoCore.ai",
 			"homepage_url": "http://www.autocore.ai/",
 			"logo": "autocore-ai.png",
