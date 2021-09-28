@@ -341,6 +341,15 @@
 			]
 		},
 		{
+			"name": "Fivecomm",
+			"homepage_url": "https://fivecomm.eu/",
+			"logo": "logo-fivecomm.png",
+			"logo_white": "logo-fivecomm-white.png",
+			"projects": [
+				"iot.mosquitto"
+			]
+		},
+		{
 			"name": "flx:business",
 			"homepage_url": "https://flx-business.de/",
 			"logo": "logo-flxbusiness.png",
