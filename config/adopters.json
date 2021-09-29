@@ -260,6 +260,15 @@
 			]
 		},
 		{
+			"name": "Eckl Electric",
+			"homepage_url": "https://www.getstokt.com/",
+			"logo": "logo-eckl-electric.png",
+			"logo_white": "logo-eckl-electric-white.png",
+			"projects": [
+				"iot.mosquitto"
+			]
+		},
+		{
 			"name": "Ekumen",
 			"homepage_url": "https://www.ekumenlabs.com/",
 			"logo": "logo-ekumen.png",
@@ -890,6 +899,15 @@
 			"logo_white": "logo-steinbeis-transferzentrum-industrielle-digitalisierung-white.png",
 			"projects": [
 				"iot.streamsheets"
+			]
+		},
+		{
+			"name": "Stokt",
+			"homepage_url": "https://www.getstokt.com/",
+			"logo": "logo-stokt.svg",
+			"logo_white": "logo-stokt-white.svg",
+			"projects": [
+				"iot.mosquitto"
 			]
 		},
 		{
