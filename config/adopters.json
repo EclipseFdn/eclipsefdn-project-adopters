@@ -866,6 +866,15 @@
 			]
 		},
 		{
+			"name": "SNCF",
+			"homepage_url": "https://www.sncf.com/fr",
+			"logo": "logo-sncf.png",
+			"logo_white": "logo-sncf-white.png",
+			"projects": [
+				"iot.keyple"
+			]
+		},
+		{
 			"name": "Cumulocity IoT by Software AG",
 			"homepage_url": "https://www.softwareag.cloud/site/product/cumulocity-iot.html",
 			"logo": "logo-cumulocity-by-softwareag.svg",
