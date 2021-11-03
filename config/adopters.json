@@ -753,6 +753,15 @@
 			]
 		},
 		{
+			"name": "Record Evolution",
+			"homepage_url": "https://www.record-evolution.de/en/home-en/",
+			"logo": "logo-record-evolution.png",
+			"logo_white": "logo-record-evolution-white.png",
+			"projects": [
+				"ecd.theia"
+			]
+		},
+		{
 			"name": "Red Hat",
 			"homepage_url": "https://developers.redhat.com",
 			"logo": "Logo-RedHat-A-Color-RGB.svg",
