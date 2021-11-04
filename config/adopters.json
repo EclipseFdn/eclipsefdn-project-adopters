@@ -893,6 +893,15 @@
 			]
 		},
 		{
+			"name": "SopraSteria",
+			"homepage_url": "https://www.soprasteria.com/",
+			"logo": "logo-soprasteria.svg",
+			"logo_white": "logo-soprasteria-white.png",
+			"projects": [
+				"iot.keyple"
+			]
+		},
+		{
 			"name": "Soracom",
 			"homepage_url": "https://www.soracom.io/",
 			"logo": "logo-soracom.svg",
