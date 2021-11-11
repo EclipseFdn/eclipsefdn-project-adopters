@@ -117,6 +117,15 @@
 			]
 		},
 		{
+			"name": "Axon Ivy",
+			"homepage_url": "https://www.axonivy.com/",
+			"logo": "axonivy-logo.svg",
+			"logo_white": "axonivy-logo-white.svg",
+			"projects": [
+				"ecd.glsp"
+			]
+		},
+		{
 			"name": "Bosch",
 			"homepage_url": "https://www.bosch.com",
 			"logo": "logo-bosch.svg",
