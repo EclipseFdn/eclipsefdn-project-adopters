@@ -575,6 +575,15 @@
 			]
 		},
 		{
+			"name": "Lizza",
+			"homepage_url": "https://lizza.de/",
+			"logo": "logo-lizza.png",
+			"logo_white": "logo-lizza-white.png",
+			"projects": [
+				"iot.streamsheets"
+			]
+		},
+		{
 			"name": "Logi.cals",
 			"homepage_url": "https://logicals.com/en/",
 			"logo": "logo-logicals.svg",
