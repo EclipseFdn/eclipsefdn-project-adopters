@@ -218,6 +218,15 @@
 			]
 		},
 		{
+			"name": "Coppernic",
+			"homepage_url": "https://www.coppernic.fr/coppernicactus/coppernic-au-meetup-sdk-eclipse-keyple/",
+			"logo": "logo-coppernic.png",
+			"logo_white": "logo-coppernic-white.png",
+			"projects": [
+				"iot.keyple"
+			]
+		},
+		{
 			"name": "CS GROUP - France",
 			"homepage_url": "https://www.csgroup.eu",
 			"logo": "logo-cs_group.svg",
@@ -482,6 +491,15 @@
 				"ecd.openvsx"
 			]
 		},
+		{
+			"name": "Ile-de-France Mobilités",
+			"homepage_url": "https://www.iledefrance-mobilites.fr/",
+			"logo": "logo-ile-de-france-mobilites.png",
+			"logo_white": "logo-ile-de-france-mobilites-white.png",
+			"projects": [
+				"iot.keyple"
+			]
+		},		
 		{
 			"name": "InnerSpace",
 			"homepage_url": "https://innerspace.io/",
