@@ -126,6 +126,15 @@
 			]
 		},
 		{
+			"name": "Bluebird",
+			"homepage_url": "https://bluebirdcorp.com/?lang=US",
+			"logo": "logo-bluebird.png",
+			"logo_white": "logo-bluebird-white.png",
+			"projects": [
+				"iot.keyple"
+			]
+		},
+		{
 			"name": "Bosch",
 			"homepage_url": "https://www.bosch.com",
 			"logo": "logo-bosch.svg",
@@ -374,6 +383,15 @@
 			"logo_white": "logo-fivecomm-white.png",
 			"projects": [
 				"iot.mosquitto"
+			]
+		},
+		{
+			"name": "Flowbird",
+			"homepage_url": "https://www.flowbird.group/",
+			"logo": "logo-flowbird.png",
+			"logo_white": "logo-flowbird-white.png",
+			"projects": [
+				"iot.keyple"
 			]
 		},
 		{
