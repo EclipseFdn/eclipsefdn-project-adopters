@@ -5,24 +5,31 @@ pipeline {
     kubernetes {
       label 'kubedeploy-agent-' + env.JOB_NAME.replaceAll("/", "-")
       yaml '''
-      apiVersion: v1
-      kind: Pod
-      spec:
-        containers:
-        - name: kubectl
-          image: eclipsefdn/kubectl:1.18-alpine
-          command:
-          - cat
-          tty: true
-          resources:
-            limits:
-              cpu: 1
-              memory: 1Gi
-        - name: jnlp
-          resources:
-            limits:
-              cpu: 1
-              memory: 1Gi
+        apiVersion: v1
+        kind: Pod
+        spec:
+          containers:
+          - name: kubectl
+            image: eclipsefdn/kubectl:okd-c1
+            command:
+            - cat
+            tty: true
+            resources:
+              limits:
+                cpu: 1
+                memory: 1Gi
+            volumeMounts:
+            - mountPath: "/home/default/.kube"
+              name: "dot-kube"
+              readOnly: false
+          - name: jnlp
+            resources:
+              limits:
+                cpu: 1
+                memory: 1Gi
+          volumes:
+          - name: "dot-kube"
+            emptyDir: {}
       '''
     }
   }
@@ -59,9 +66,9 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '10'))
   }
 
-  triggers { 
+  triggers {
     // build once a week to keep up with parents images updates
-    cron('H H * * H') 
+    cron('H H * * H')
   }
 
   stages {
@@ -73,8 +80,8 @@ pipeline {
         withDockerRegistry([credentialsId: '04264967-fea0-40c2-bf60-09af5aeba60f', url: 'https://index.docker.io/v1/']) {
           sh '''
              docker build -f src/main/docker/Dockerfile.agent --no-cache -t ${IMAGE_NAME}-build-env:${TAG_NAME} -t ${IMAGE_NAME}-build-env:latest .
-             docker push ${IMAGE_NAME}-build-env:${TAG_NAME} 
-             docker push ${IMAGE_NAME}-build-env:latest 
+             docker push ${IMAGE_NAME}-build-env:${TAG_NAME}
+             docker push ${IMAGE_NAME}-build-env:latest
           '''
         }
       }
@@ -180,22 +187,15 @@ pipeline {
           unstash name: "target"
           withKubeConfig([credentialsId: 'ci-bot-okd-c1-token', serverUrl: 'https://api.okd-c1.eclipse.org:6443']) {
             sh '''
-              DEPLOYMENT="$(k8s getFirst deployment "${NAMESPACE}" "app=${APP_NAME},environment=${ENVIRONMENT}")"
-              if [[ $(echo "${DEPLOYMENT}" | jq -r 'length') -eq 0 ]]; then
-                echo "ERROR: Unable to find a deployment to patch matching 'app=${APP_NAME},environment=${ENVIRONMENT}' in namespace ${NAMESPACE}"
-                exit 1
-              else 
-                DEPLOYMENT_NAME="$(echo "${DEPLOYMENT}" | jq -r '.metadata.name')"
-                kubectl create configmap eclipsefdn-project-adopters-map -n "${NAMESPACE}" --from-file=adopters_json_compressed=target/config/adopters.json --dry-run=client -o yaml | kubectl apply -f -
-                kubectl set image "deployment.v1.apps/${DEPLOYMENT_NAME}" -n "${NAMESPACE}" "${CONTAINER_NAME}=${IMAGE_NAME}:${TAG_NAME}" --record=true
-                if ! kubectl rollout status "deployment.v1.apps/${DEPLOYMENT_NAME}" -n "${NAMESPACE}"; then
-                  # will fail if rollout does not succeed in less than .spec.progressDeadlineSeconds
-                  kubectl rollout undo "deployment.v1.apps/${DEPLOYMENT_NAME}" -n "${NAMESPACE}"
-                  exit 1
-                fi
-              fi
+              kubectl create configmap eclipsefdn-project-adopters-map -n "${NAMESPACE}" --from-file=adopters_json_compressed=target/config/adopters.json --dry-run=client -o yaml | kubectl apply -f -
             '''
           }
+          updateContainerImage([
+            namespace: "${env.NAMESPACE}",
+            selector: "app=${env.APP_NAME},environment=${env.ENVIRONMENT}",
+            containerName: "${env.CONTAINER_NAME}",
+            newImageRef: "${env.IMAGE_NAME}:${env.TAG_NAME}"
+          ])
         }
       }
     }
