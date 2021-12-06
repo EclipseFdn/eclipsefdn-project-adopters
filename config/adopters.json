@@ -198,6 +198,15 @@
 			]
 		},
 		{
+			"name": "Calypso Networks Association",
+			"homepage_url": "https://calypsonet.org/keyple-resources/",
+			"logo": "logo-calypsonet.png",
+			"logo_white": "",
+			"projects": [
+				"iot.keyple"
+			]
+		},
+		{
 			"name": "Cassens",
 			"homepage_url": "https://www.cassens.com/",
 			"logo": "logo-cassens.png",
