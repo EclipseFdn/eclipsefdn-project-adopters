@@ -264,6 +264,15 @@
 			]
 		},
 		{
+			"name": "CTS",
+			"homepage_url": "https://cts-strasbourg.eu/en/",
+			"logo": "logo-cts.png",
+			"logo_white": "",
+			"projects": [
+				"iot.keyple"
+			]
+		},
+		{
 			"name": "Digital Lights",
 			"homepage_url": "https://lights.digital",
 			"logo": "logo-digital-lights.png",
