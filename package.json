@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "chai": "^4.2.0",
-    "eclipsefdn-hugo-solstice-theme": "0.0.114",
+    "eclipsefdn-hugo-solstice-theme": "0.0.139",
     "js-yaml": "^3.13.1",
     "json-minify": "^1.0.0",
     "jsonlint": "^1.6.3",

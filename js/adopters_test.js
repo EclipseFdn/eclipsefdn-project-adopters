@@ -55,6 +55,10 @@ function createProjectHeader(project) {
 function createAdopters(project, adopter, baseURL) {
 	var element = document.getElementById(project + "-ul");
 
+	// Skip creating the logo if it is empty string or undefined or null
+	if (!adopter['logo']) {
+		return;
+	}
 	// Get the home page url of this adopter
 	var url = '';
 	if (typeof adopter['homepage_url'] !== 'undefined') {
