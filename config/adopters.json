@@ -323,6 +323,15 @@
 			]
 		},
 		{
+			"name": "Entiros",
+			"homepage_url": "https://entiros.se/",
+			"logo": "logo-entiros.png",
+			"logo_white": "logo-entiros-white.png",
+			"projects": [
+				"iot.mosquitto"
+			]
+		},
+		{
 			"name": "Ericsson",
 			"homepage_url": "https://www.ericsson.com/en/networks/offerings/cellular-iot",
 			"logo": "logo-ericsson.svg",
@@ -544,7 +553,7 @@
 			"projects": [
 				"iot.keyple"
 			]
-		},		
+		},
 		{
 			"name": "InnerSpace",
 			"homepage_url": "https://innerspace.io/",
@@ -792,7 +801,7 @@
 			"logo": "logo-picknik.png",
 			"logo_white": "logo-picknik-white.png",
 			"projects": [
-				"iot.cyclonedds" 
+				"iot.cyclonedds"
 			]
 		},
 		{
