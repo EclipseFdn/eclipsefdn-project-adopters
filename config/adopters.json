@@ -89,6 +89,15 @@
 			]
 		},
 		{
+			"name": "Arduino",
+			"homepage_url": "https://www.arduino.cc/en/software#future-version-of-the-arduino-ide",
+			"logo": "logo-arduino.svg",
+			"logo_white": "logo-arduino-white.svg",
+			"projects": [
+				"ecd.theia"
+			]
+		},
+		{
 			"name": "AutoCore.ai",
 			"homepage_url": "http://www.autocore.ai/",
 			"logo": "autocore-ai.png",
