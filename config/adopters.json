@@ -1055,6 +1055,15 @@
 			]
 		},
 		{
+			"name": "Terapines",
+			"homepage_url": "http://www.terapines.com/",
+			"logo": "logo-terapines.png",
+			"logo_white": "logo-terapines-white.png",
+			"projects": [
+				"ecd.theia"
+			]
+		},
+		{
 			"name": "The Construct",
 			"homepage_url": "http://www.theconstruct.ai",
 			"logo": "logo-construct.png",
