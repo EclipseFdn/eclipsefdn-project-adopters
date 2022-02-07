@@ -721,6 +721,15 @@
 			]
 		},
 		{
+			"name": "ODALID",
+			"homepage_url": "https://odalid.com/",
+			"logo": "logo-odalid.png",
+			"logo_white": "logo-odalid-white.png",
+			"projects": [
+				"iot.keyple"
+			]
+		},
+		{
 			"name": "OneWave",
 			"homepage_url": "https://onewave.io/transport",
 			"logo": "logo-onewave.png",
