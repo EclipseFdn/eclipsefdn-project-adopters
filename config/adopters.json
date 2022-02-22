@@ -1037,6 +1037,15 @@
 			]
 		},
 		{
+			"name": "STMicroelectronics",
+			"homepage_url": "https://www.st.com",
+			"logo": "logo-stmicroelectronics.svg",
+			"logo_white": "logo-stmicroelectronics-white.svg",
+			"projects": [
+				"ecd.theia"
+			]
+		},
+		{
 			"name": "Stokt",
 			"homepage_url": "https://www.getstokt.com/",
 			"logo": "logo-stokt.svg",
