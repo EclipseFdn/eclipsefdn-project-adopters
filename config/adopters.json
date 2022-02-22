@@ -1042,7 +1042,9 @@
 			"logo": "logo-stmicroelectronics.svg",
 			"logo_white": "logo-stmicroelectronics-white.svg",
 			"projects": [
-				"ecd.theia"
+				"ecd.theia",
+				"ecd.glsp",
+				"ecd.emfcloud"
 			]
 		},
 		{
