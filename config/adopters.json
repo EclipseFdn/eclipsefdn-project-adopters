@@ -1075,6 +1075,15 @@
 			]
 		},
 		{
+			"name": "Team VUEngine",
+			"homepage_url": "https://www.vuengine.dev",
+			"logo": "logo-team-vuengine.png",
+			"logo_white": "logo-team-vuengine-white.png",
+			"projects": [
+				"ecd.theia"
+			]
+		},
+		{
 			"name": "Terapines",
 			"homepage_url": "https://www.terapines.com/",
 			"logo": "logo-terapines.png",
