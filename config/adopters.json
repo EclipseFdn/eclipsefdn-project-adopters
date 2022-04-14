@@ -1075,15 +1075,6 @@
 			]
 		},
 		{
-			"name": "Team VUEngine",
-			"homepage_url": "https://www.vuengine.dev",
-			"logo": "logo-team-vuengine.png",
-			"logo_white": "logo-team-vuengine-white.png",
-			"projects": [
-				"ecd.theia"
-			]
-		},
-		{
 			"name": "Terapines",
 			"homepage_url": "https://www.terapines.com/",
 			"logo": "logo-terapines.png",
@@ -1203,6 +1194,15 @@
 			"logo_white": "logo-vscodium-white.svg",
 			"projects": [
 				"ecd.openvsx"
+			]
+		},
+		{
+			"name": "VUEngine",
+			"homepage_url": "https://www.vuengine.dev",
+			"logo": "logo-vuengine.png",
+			"logo_white": "logo-vuengine-white.png",
+			"projects": [
+				"ecd.theia"
 			]
 		},
 		{
