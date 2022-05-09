@@ -1,5 +1,12 @@
 # eclipsefdn-project-adopters
 
+---
+**NOTE**
+
+This project was migrated to [Eclipse Gitlab](https://gitlab.eclipse.org/eclipsefdn/it/api/eclipsefdn-project-adopters) on May 9, 2022.
+
+---
+
 ## Getting started
 
 Install dependencies, build website and start a simple webserver:
